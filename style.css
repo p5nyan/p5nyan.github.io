@@ -1,0 +1,99 @@
+:root {
+  font-size: 16px;
+  font-family: 'BIZ UDGothic', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url(./images/bg.png);
+  margin: 0;
+}
+
+main {
+  background-color: white;
+  width: 100%;
+  margin: 0;
+  padding-top: 0;
+}
+
+div#content {
+  padding: 0;
+}
+
+@media screen and (min-width: 520px) {
+  main {
+    max-width: 900px;
+    width: 90%;
+  }
+
+  div#content {
+    padding: 1rem;
+  }
+}
+
+h1 {
+  background-color: coral;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 2em;
+  line-height: 2;
+}
+
+h2 {
+  background-color: lightgray;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+div.link {
+  margin: 0.5rem 1rem;
+  background-color: cornflowerblue;
+  border-radius: 0.5rem;
+}
+
+div.link a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+}
+
+div.codeLink {
+  margin: 0.5rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+div.codeLink div.link {
+  margin: 0;
+}
+
+@media screen and (min-width: 520px) {
+  div.link {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  div.codeLink {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+p.alert {
+  color: firebrick;
+  border: solid firebrick 2px;
+  padding: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+@media screen and (min-width: 520px) {
+  p.alert {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

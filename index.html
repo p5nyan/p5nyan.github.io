@@ -4,8 +4,66 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>『Scratchの次にやるプログラミングの本』のサポートサイト</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <h1>『Scratchの次にやるプログラミングの本』のサポートサイト</h1>
+    <main>
+      <h1>
+        『Scratchの次にやるプログラミングの本』<br />
+        サポートサイト
+      </h1>
+
+      <div id="content">
+        <h2>ピゴニャンのスケッチ</h2>
+
+        <div class="link">
+          <a href="https://editor.p5js.org/p5nyan/sketches/fHkjcRuKX" target="_blank" rel="noopener"
+            >ピゴニャンのスケッチ</a
+          >
+        </div>
+
+        <h2>サンプルコード</h2>
+
+        <p class="alert">準備中</p>
+
+        <div class="codeLink" v-scope>
+          <template v-for="n in [...Array(13)].map((_, i) => i + 2)">
+            <div class="link">
+              <a :href="`./code/0${n}.html`" v-if="n < 10">0{{n}}</a>
+              <a :href="`./code/${n}.html`" v-else>{{n}}</a>
+            </div>
+          </template>
+        </div>
+
+        <h2>練習問題</h2>
+
+        <p class="alert">準備中</p>
+
+        <div class="codeLink" v-scope>
+          <template v-for="n in [...Array(11)].map((_, i) => i + 3)">
+            <div class="link">
+              <a :href="`./ex/0${n}.html`" v-if="n < 10">0{{n}}</a>
+              <a :href="`./ex/${n}.html`" v-else>{{n}}</a>
+            </div>
+          </template>
+        </div>
+
+        <h2>クリエイティブコーディングの情報</h2>
+
+        <div class="link">
+          <a href="https://openprocessing.org/">OpenProcessing</a>
+        </div>
+        <div class="link">
+          <a href="https://openprocessing.org/user/6533/">高尾俊介さんリンクの作品</a>
+        </div>
+        <div class="link">
+          <a href="https://openprocessing.org/user/207560/">Senbakuさんの作品</a>
+        </div>
+      </div>
+    </main>
+    <script src="https://unpkg.com/petite-vue" defer init></script>
   </body>
 </html>
