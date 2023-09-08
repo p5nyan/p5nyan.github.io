@@ -141,6 +141,7 @@ h3:not(.caption) {
 
 ol {
   margin-right: 2em;
+  padding-left: 1em;
   list-style-type: none;
   counter-reset: item;
 }
