@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>レッスン 03</title>
+    <link rel="stylesheet" href="lesson.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./gist-embed.min.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>レッスン 03</h1>
+      <p>〜 関数呼び出し 〜</p>
+    </header>
+
+    <nav><a href="../index.html">🔙</a></nav>
+
+    <main>
+      <h2>サンプルコード</h2>
+
+      <p>
+        サポートサイトでは、<mark>function draw() { ... }</mark>
+        の中のコードは省略せずにすべて<ruby>載<rt>の</rt></ruby
+        >せています。本に載っているのは<mark class="highlight"
+          >薄黄色の背景色</mark
+        >が付いた部分です。背景色が全くないコードは全文が本に載っているものです。<br />
+        <span>p5.js</span>
+        という部分をクリックするとp5.jsのウェブエディターが開き、プログラムを実行してみることができます。
+      </p>
+
+      <h3 class="caption">
+        <span>p.42</span>図3.1：歩いてしゃべる比較コード
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/bSOx1Ifi5"
+          target="_blank"
+          rel="noopener"
+          >p5.js</a
+        >
+      </h3>
+      <code
+        data-gist-id="9771e9a4ef1e35fc29d5d51bbe056dd0"
+        data-gist-hide-footer="true"
+      >
+      </code>
+
+      <p>
+        ここから下では、先頭の2行のおまじないと（変更がない場合の）function
+        setup { ... } の部分は省略します。
+      </p>
+
+      <h3 class="caption">
+        <span>p.52</span>本文中のコード
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/_deF9_9jx"
+          target="_blank"
+          rel="noopener"
+          >p5.js</a
+        >
+      </h3>
+      <code
+        data-gist-id="d7010195050da31e575a9f192a496312"
+        data-gist-highlight-line="4-5,7-8,10-12"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.53</span>図3.4 ネコの向きや色を変える比較コード
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/INETKvQ_V"
+          target="_blank"
+          rel="noopener"
+          >p5.js</a
+        >
+      </h3>
+      <code
+        data-gist-id="e0872a1653bf2902e256cfcf12f4f8c0"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.55</span>
+        図3.17 位置を座標で指定する比較コード
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/odPz9s80o"
+          target="_blank"
+          rel="noopener"
+          >p5.js</a
+        >
+      </h3>
+      <code
+        data-gist-id="891a9f0752f4c774f5c1d769e53d932a"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.56</span>
+        図3.18 ネコに自分の位置(座標値)をしゃべらせる比較コード
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/KgKhNzF8y"
+          target="_blank"
+          rel="noopener"
+          >p5.js</a
+        >
+      </h3>
+      <code
+        data-gist-id="713ef32b6e9fe2ff70f30de36eeabd2f"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.58</span>
+        コード3.3 putFish関数で魚を配置
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/L6LwAwoM0"
+          target="_blank"
+          rel="noopener"
+          >p5.js</a
+        >
+      </h3>
+      <code
+        data-gist-id="209bf3d35343b6078e006b14375b7629"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.58</span>
+        コード3.3 putFish関数で魚を配置 ＋追記
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/Sn3EFoPHv"
+          target="_blank"
+          rel="noopener"
+          >p5.js</a
+        >
+      </h3>
+      <code
+        data-gist-id="5b9ba1579e23c15122ae08e8bb73ff37"
+        data-gist-highlight-line="8-14"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.61</span>
+        コード3.4 「ピゴニャンのスケッチ」で circle 関数を呼び出す
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/3Rw52rbfF"
+          target="_blank"
+          rel="noopener"
+          >p5.js</a
+        >
+      </h3>
+      <code
+        data-gist-id="27a88bca371e5d2258b2af321d786502"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.61</span>
+        コード3.5 関数の呼び出しの順序
+        <a href="" target="_blank" rel="noopener">p5.js</a>
+      </h3>
+      <code
+        data-gist-id="c2e6c60a2b1b3bd612ecf3443d7a8ece"
+        data-gist-highlight-line="6-7"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h2 id="ex">練習問題</h2>
+
+      <p>
+        練習問題に挑戦して、本レッスンの内容がどのくらい理解できているか確認してみましょう。
+      </p>
+
+      <p>
+        新しい「ピゴニャンのスケッチ」を用意して、まずは次のコードをコピペしてください。念のため全コードを表示していますが、書き写すのは薄黄色背景の4行だけです。
+        <br />
+        <mark>/* */</mark>
+        でコメントアウトされている部分は問題文なのでコピペしなくても構いませんが、コードに含めておくと参考になります。
+      </p>
+
+      <code
+        data-gist-id="26813f3dd70a782841d6d01f9c251edd"
+        data-gist-highlight-line="12-16"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <p>このコードを実行すると、下図のように色違いの3匹の魚が描画されます。</p>
+
+      <!-- 図3.20: 練習問題 -->
+      <figure>
+        <img src="fig/03ex-1.png" width="500" />
+      </figure>
+
+      <p>
+        ピゴニャンを動かして、この3匹の魚を食べさせましょう。コードや図の中に書いてあるように、使う関数と移動回数、歩数は指定されています。<br />
+        ヒントは次のとおりです。
+      </p>
+      <ol>
+        <li>
+          ピゴニャンの最初の位置（座標）はstart関数の引数です。魚の位置も、putFish関数の引数が
+          (x座標, y座標)
+          です。move関数で1回に何歩ずつ歩くかは、座標値から自分で計算してみてください。オレンジ色の魚を食べるにはピゴニャンの向きを
+          “上” に変える必要があります。
+        </li>
+        <li>
+          むらさき色の魚までgoTo関数やsetY関数で移動するときは、それぞれ指定された歩数や移動回数になるよう、ピゴニャンの移動先の座標値を計算します。これらの関数ではピゴニャンの向きは変わらないので、事前に
+          “下” を向けておくとそれらしくなります。
+        </li>
+        <li>&nbsp;最後、ピゴニャンに何かをしゃべらせるのはsay関数です。</li>
+      </ol>
+      <p>
+        コツは、4つの問題すべてを一気に書いてしまおうと思わないことです。1問やるごとに実行ボタンを押して確認する。あるいは、ちょっとでもコードを書いたらすぐ実行して確認してください。「○回に分けて」という部分を無視して、1歩ずつで3匹取るところからはじめてもいいかもしれません。
+      </p>
+
+      <details>
+        <summary>解答例（クリックしてね）</summary>
+        <p>
+          解答 “例”
+          なので、まったく同じである必要はありません。与えられた条件のとおり動作すれば、そのコードも正解です。
+        </p>
+        <code
+          data-gist-id="ade1099db5ad589182b1a4ccdfad521c"
+          data-gist-hide-footer="true"
+        ></code>
+      </details>
+    </main>
+
+    <footer>
+      『 はじめての “文字で打ちこむ” プログラミングの本 』 サポートサイト
+    </footer>
+  </body>
+</html>
