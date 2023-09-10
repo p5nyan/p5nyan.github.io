@@ -42,7 +42,7 @@
       <h2>サンプルコード</h2>
       <p>各レッスンのサンプルコードは以下のリンクボタンから見られます。</p>
       <div class="codeLink" v-scope>
-        <template v-for="n in [...Array(13)].map((_, i) => i + 2)">
+        <template v-for="n in [...Array(12)].map((_, i) => i + 3)">
           <div class="link">
             <a :href="`./lesson/0${n}.html`" v-if="n < 10">レッスン 0{{n}}</a>
             <a :href="`./lesson/${n}.html`" v-else>レッスン {{n}}</a>
@@ -65,9 +65,9 @@
         </template>
       </div>
 
-      <h2>補足情報</h2>
+      <h2>追加の情報</h2>
 
-      <h3>クリエイティブコーディングの情報</h3>
+      <h3>クリエイティブコーディングについて</h3>
       <p>この本で紹介した作品については以下のリンクを参照してください。</p>
       <ul>
         <li>
@@ -88,6 +88,34 @@
 
       <h3>p5.jsのウェブエディターを使わない方法</h3>
       <p class="notyet">準備中</p>
+
+      <h3>この本を終えたあとに…</h3>
+      <p>
+        この本を終えて、p5.jsでグラフィックスのアニメーションを作ってみたり、JavaScriptでウェブアプリを作ってみたりしたい人は、著者のオンラインテキストも参考にしてください。<br />
+        「文系大学生のための」と書かれていますが、この本を最後まで読んだ人なら小学生〜高校生でも読めると思います。「p5.js入門」のほうは基本的な文法の復習にもなります。
+      </p>
+      <ul>
+        <li>
+          <a href="https://zenn.dev/ojk/books/intro-to-p5js"
+            >文系大学生のためのp5.js入門</a
+          >
+        </li>
+        <li>
+          <a href="https://zenn.dev/ojk/books/intro-to-javascript"
+            >文系大学生のためのJavaScript入門</a
+          >
+        </li>
+      </ul>
+      <p>
+        JavaScriptについてさらに詳しく知りたい人は、以下のオンラインテキストが参考になります。こちらは「入門書」とありますが、かなり詳しく説明がされています。
+      </p>
+      <ul>
+        <li>
+          <a href="https://jsprimer.net/"
+            >JavaScript Primer 迷わないための入門書</a
+          >
+        </li>
+      </ul>
 
       <h2>正誤表（間違いの修正）</h2>
       <p>いまのところ見つかっていません。</p>

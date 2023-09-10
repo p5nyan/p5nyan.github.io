@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>レッスン 05</title>
+    <link rel="stylesheet" href="lesson.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./gist-embed.min.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>レッスン 05</h1>
+      <p>〜 演算 〜</p>
+    </header>
+
+    <nav class="back">
+      <a href="../index.html">🔙</a>
+      <a href="#">🔝</a>
+    </nav>
+
+    <main>
+      <h2>サンプルコード</h2>
+
+      <ul>
+        <li>
+          サポートサイトでは、<mark>async function draw() { ... }</mark>
+          の中のコードは省略せずにすべて<ruby>載<rt>の</rt></ruby
+          >せています。
+        </li>
+        <li>
+          本に載っていない部分には<span class="gray">灰色の背景色</span
+          >を付けています。
+        </li>
+        <li>
+          先頭2行のおまじないと
+          <mark>function setup() { ... }</mark>
+          は省略しますが、みなさんのコードからは消さないでください。
+        </li>
+        <li>
+          ここに載せているサンプルコードには、コードが読み取りやすいように「空行」を追加しています。
+        </li>
+        <li>
+          キャプション横の
+          <span class="p5link">p5.js</span>
+          をクリックするとp5.jsのウェブエディターが開き、プログラムを実行することができます。
+        </li>
+      </ul>
+
+      <nav class="codeNav">
+        <select id="codeSelect">
+          <option value="init" selected disabled>サンプルコードを選ぶ</option>
+        </select>
+        <label for="codeSelect">▼</label>
+      </nav>
+
+      <h3 class="caption">
+        <span>p.87</span>
+        図5.2 3回に分けて移動の比較コード
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/iXyJWJEOG"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
+      </h3>
+      <code
+        data-gist-id="9c21fc7252e54e01c2de0953c124d730"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.90</span>
+        コード5.1 getX関数の戻り値を先に変数に入れておく
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/rT5e1hZ3D"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
+      </h3>
+      <code
+        data-gist-id="829fd17bd74f590998ea078d30b65316"
+        data-gist-highlight-line="1-3, 7-15"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.91</span>
+        コード 5.2 ほかの変数に代入して変数の値を変える
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/5yBWw32Be"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
+      </h3>
+      <code
+        data-gist-id="831d402d574a983f5875432609dd1e29"
+        data-gist-highlight-line="1-3, 8"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.91</span>
+        コード5.3 同じ変数に代入して変数の値を変える
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/vWftGkZ3W"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
+      </h3>
+      <code
+        data-gist-id="3aff779801e493c99ef05ea1ef82389c"
+        data-gist-highlight-line="1-10, 15"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.92</span>
+        本文のコード
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/gxFe3NNRm"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
+      </h3>
+      <code
+        data-gist-id="0f85dc96959c81d9f7425fe2c47ae1f9"
+        data-gist-highlight-line="1-3, 13"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.92</span>
+        コード5.4 代入演算子の使用例
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/GoBXTq4EE"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
+      </h3>
+      <code
+        data-gist-id="84455b82eebe6901103e3b2d6a66ac59"
+        data-gist-highlight-line="1-11, 16-23"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.92</span>
+        コード5.5 四則演算の代入演算子
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/rXco87zfv"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
+      </h3>
+      <code
+        data-gist-id="d1a5e91db800f7076a7bbe0943fa33c2"
+        data-gist-highlight-line="1-3, 10-16"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <nobr>
+          <span>p.95</span>
+          コード5.8 数値と数字の足し算も連結になる、<wbr />コード5.9
+          parseInt関数、<wbr />本文のコード
+          <a
+            href="https://editor.p5js.org/p5nyan/sketches/ckFouCjmu"
+            target="_blank"
+            rel="noopener"
+            class="p5link"
+            >p5.js</a
+          >
+        </nobr>
+      </h3>
+      <code
+        data-gist-id="3692f3ba9f2bdf1d40dd0c774a4d5a28"
+        data-gist-highlight-line="1-3, 7-9, 14-16, 20"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <nobr>
+          <span>p.96</span>
+          コード5.10 連結したい文字列と変数がたくさんあると...、<wbr />コード5.11
+          文字列の足し算とテンプレート文字列、<wbr />本文のコード
+          <a
+            href="https://editor.p5js.org/p5nyan/sketches/PEiGRhcjf"
+            target="_blank"
+            rel="noopener"
+            class="p5link"
+            >p5.js</a
+          >
+        </nobr>
+      </h3>
+      <code
+        data-gist-id="56e58b8976d365ccaaa5c195ae4121a0"
+        data-gist-highlight-line="1-3, 8, 14, 18"
+        data-gist-line=""
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.96</span>
+        図5.22 ［構文］テンプレート文字列（の例）
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/JsdhOQiqv"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
+      </h3>
+      <code
+        data-gist-id="e9dffe4e67677859d7aa66a857fddbdf"
+        data-gist-highlight-line="1-5, 9"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.98</span>
+        コード5.12 random関数とfloor関数を組み合わせる
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/Qv9xKHXC4"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
+      </h3>
+      <code
+        data-gist-id="7341a0fce2431bc6accbcaf3f988414d"
+        data-gist-highlight-line="1-3, 9-15"
+        data-gist-line=""
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.99</span>
+        本文のコード
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/NSYItozKF"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
+      </h3>
+      <code
+        data-gist-id="2ec232e99d417ce648d4eb8b967c1039"
+        data-gist-highlight-line="1-3, 13"
+        data-gist-line=""
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.99</span>
+        図5.25 ［構文］整数の乱数（の例）
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/LHMwI01u7"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
+      </h3>
+      <code
+        data-gist-id="3f445f94b78706a7ca2bd10cd7387dc9"
+        data-gist-highlight-line="1,4-7"
+        data-gist-line=""
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.101：コラム</span>
+        <nobr>
+          本文コード、<wbr />コードC5.a parseInt関数とparseFloat関数
+          <a
+            href="https://editor.p5js.org/p5nyan/sketches/BUZU3snkx"
+            target="_blank"
+            rel="noopener"
+            class="p5link"
+            >p5.js</a
+          >
+        </nobr>
+      </h3>
+      <code
+        data-gist-id="dbb35913b14cbe05b862041484eb99de"
+        data-gist-highlight-line="1-2, 18, 27"
+        data-gist-line=""
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h2 id="ex">練習問題</h2>
+
+      <p>
+        練習問題に挑戦して、本レッスンの内容がどのくらい理解できているか確認してみましょう。
+      </p>
+
+      <p>
+        <br />
+        <mark>/* */</mark>
+        でコメントアウトされている部分は問題文なのでコピペしなくても構いませんが、コードに含めておくと参考になります。
+      </p>
+
+      <code
+        data-gist-id=""
+        data-gist-highlight-line=""
+        data-gist-hide-footer="true"
+      ></code>
+
+      <p class="question">
+        このコードを実行すると、下図のように色違いの3匹の魚が描画されます。
+      </p>
+
+      <figure>
+        <img src="fig/" width="500" />
+      </figure>
+
+      <details>
+        <summary>解答例（クリックしてね）</summary>
+        <p>
+          解答 “例”
+          なので、まったく同じである必要はありません。与えられた条件のとおり動作すれば、そのコードも正解です。
+        </p>
+        <code data-gist-id="" data-gist-hide-footer="true"></code>
+      </details>
+    </main>
+
+    <footer>
+      『 はじめての “文字で打ちこむ” プログラミングの本 』 サポートサイト
+    </footer>
+
+    <script src="codeNav.js" type="module"></script>
+  </body>
+</html>

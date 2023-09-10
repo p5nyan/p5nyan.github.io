@@ -18,7 +18,11 @@
 }
 
 .gist tr:nth-child(even) td:last-of-type {
-  background-color: rgb(250, 250, 250);
+  background-color: #fffde7;
+}
+
+.gist tr:nth-child(odd) td:last-of-type {
+  background-color: #fff1df;
 }
 
 body {
@@ -40,35 +44,99 @@ header p {
   font-weight: bold;
 }
 
-nav {
-  font-size: 1.5em;
-  width: 2.5em;
-  height: 2.5em;
-  line-height: 1.5em;
-  background-color: var(--yellowgreen);
-  border-radius: 2rem;
-  color: white;
-  font-weight: bold;
+nav.back {
   position: fixed;
   right: 20px;
   top: 20px;
   z-index: 1;
 }
 
-nav a {
+nav.back a {
   display: block;
-  width: 100%;
+  box-sizing: border-box;
+  width: 2.5em;
+  height: 2.5em;
+  font-size: 1.5em;
+  background-color: var(--pink);
+  color: white;
+  font-weight: bold;
+  line-height: 1.5em;
+  border-radius: 2rem;
   text-align: center;
   padding: 0.5em 0;
   text-decoration: none;
+}
+
+nav.back a:last-of-type {
+  background-color: var(--yellowgreen);
+  margin-top: 10px;
+}
+
+nav.codeNav {
+  margin: 3rem 0 0;
+}
+
+nav.codeNav label {
+  color: white;
+  background-color: var(--yellowgreen);
+  position: relative;
+  right: -5px;
+  top: 0.2em;
+  padding: 0.6em 0.5em 0.4em;
+  border-radius: 1em;
+  z-index: -1;
+}
+
+nav.codeNav select {
+  padding: 1em;
+  font-weight: bold;
+  appearance: none;
+  border: solid 2px var(--yellowgreen);
+  border-radius: 2em;
+  margin-right: -4em;
+  background-color: transparent;
+}
+
+nav.codeNav select:focus {
+  outline-color: var(--yellowgreen);
+}
+
+ul {
+  margin-right: 2em;
+  padding-left: 1em;
+  list-style-type: none;
+  counter-reset: item;
+}
+
+ul li a {
+  text-decoration: none;
+  color: darkslateblue;
+}
+
+ul li {
+  text-indent: -1.3em;
+  padding-left: 1.3em;
+}
+
+ul li::before {
+  content: '●';
+  font-size: 0.8em;
+  color: var(--green);
+  vertical-align: 0.1em;
+}
+
+ul li:not(:last-of-type) {
+  margin-bottom: 0.5em;
+  padding-bottom: 0.5em;
+  border-bottom: dotted 2px var(--green);
 }
 
 mark {
   background: linear-gradient(transparent 50%, var(--marker) 0%);
 }
 
-mark.highlight {
-  background-color: cornsilk;
+span.gray {
+  background-color: rgb(245, 245, 245);
   padding: 0.2em 0.3em;
   border: solid 1px lightgray;
   margin: 0 0.2em;
@@ -91,13 +159,7 @@ h2::after {
   font-size: 0.5em;
 }
 
-h2 + p {
-  border: solid var(--orange) 2px;
-  padding: 1em;
-}
-
-h2 + p span {
-  color: white;
+.p5link {
   font-size: 0.8rem;
   font-weight: normal;
   background-color: var(--pink);
@@ -109,18 +171,12 @@ h2 + p span {
 h3.caption {
   color: darkslateblue;
   font-size: 1rem;
-  margin: 2rem 0 5px;
+  margin: 3rem 0 5px;
 }
 
-h3.caption a {
+:is(h3, .question) a {
   text-decoration: none;
-  color: white;
-  font-size: 0.8rem;
-  font-weight: normal;
-  background-color: var(--pink);
-  padding: 0.2em 0.5em 0.3em;
-  vertical-align: 0.1em;
-  border-radius: 1em;
+  color: black;
 }
 
 h3.caption span {
@@ -137,6 +193,11 @@ h3:not(.caption) {
   border-left: solid 0.5em var(--pink);
   padding-left: 0.5em;
   margin-top: 2.5rem;
+}
+
+h3 + p {
+  font-size: 0.8em;
+  line-height: 1.5;
 }
 
 ol {

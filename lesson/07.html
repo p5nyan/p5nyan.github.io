@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>レッスン 07</title>
+    <link rel="stylesheet" href="lesson.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./gist-embed.min.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>レッスン 07</h1>
+      <p>〜 while 文 〜</p>
+    </header>
+
+    <nav class="back">
+      <a href="../index.html">🔙</a>
+      <a href="#">🔝</a>
+    </nav>
+
+    <main>
+      <h2>サンプルコード</h2>
+
+      <ul>
+        <li>
+          サポートサイトでは、<mark>async function draw() { ... }</mark>
+          の中のコードは省略せずにすべて<ruby>載<rt>の</rt></ruby
+          >せています。
+        </li>
+        <li>
+          本に載っていない部分には<span class="gray">灰色の背景色</span
+          >を付けています。
+        </li>
+        <li>
+          先頭2行のおまじないと
+          <mark>function setup() { ... }</mark>
+          は省略しますが、みなさんのコードからは消さないでください。
+        </li>
+        <li>
+          ここに載せているサンプルコードには、コードが読み取りやすいように「空行」を追加しています。
+        </li>
+        <li>
+          キャプション横の
+          <span class="p5link">p5.js</span>
+          をクリックするとp5.jsのウェブエディターが開き、プログラムを実行することができます。
+        </li>
+      </ul>
+
+      <nav class="codeNav">
+        <select id="codeSelect">
+          <option value="init" selected disabled>サンプルコードを選ぶ</option>
+        </select>
+        <label for="codeSelect">▼</label>
+      </nav>
+
+      <h3 class="caption">
+        <span>p.128</span>
+        図7.5 ［構文］ while文（の例）
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/vJqcinr7t"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
+      </h3>
+      <code
+        data-gist-id="2cb8461de2d7986a0584612fef5ab50c"
+        data-gist-highlight-line="1, 7"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.128</span>
+        図7.6 5回に分けて歩く比較コード
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/Veim5z3nF"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
+      </h3>
+      <code
+        data-gist-id="2af7039bba150bf6e22544dbd60bdde0"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.130</span>
+        本文のコード（その1／カウントダウン）
+        <a href="" target="_blank" rel="noopener" class="p5link">p5.js</a>
+      </h3>
+      <code
+        data-gist-id="39051af8fa1b4f149127214e079324e5"
+        data-gist-highlight-line=""
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.130-131</span>
+        本文のコード（その2／カウンター変数以外の変数を使う）
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/759qZkMXv"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
+      </h3>
+      <p>
+        同じ意味のコードを一緒に記述しているので、一方をコメントアウトして動作確認してください。
+      </p>
+      <code
+        data-gist-id="12ea89db5cd3e029a22eb9ba0bdcb92d"
+        data-gist-highlight-line="1-6, 14, 23"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.131</span>
+        コード7.1 乱数を使った条件式の例
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/uJD4PYWeS"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
+      </h3>
+      <code
+        data-gist-id="274eb56a32ba6949b837066b0f18c620"
+        data-gist-highlight-line="1-3, 8, 13"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.131</span>
+        本文のコード（乱数を使う）
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/8C0jqVgHw"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
+      </h3>
+      <code
+        data-gist-id="cec73252b8fb7178730ab3e3a93d1051"
+        data-gist-highlight-line="1-3, 11"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.132</span>
+        図7.9 繰り返し＋条件分岐（while文＋if文）の比較コード
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/B1Um1E-B2"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
+      </h3>
+      <code
+        data-gist-id="635d9456279312f9ef0720c3be62e428"
+        data-gist-highlight-line="1-3, 17"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.133</span>
+        本文のコード（繰り返しと剰余演算子）
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/M8LjmWp7B"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
+      </h3>
+      <p>動作がわかりやすいようにピゴニャンを動かしています。</p>
+      <code
+        data-gist-id="70d54e1b34c586a0ebe3bdb19708176e"
+        data-gist-highlight-line="1-3, 10, 15"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.133</span>
+        図7.10 剰余演算子を使って青とオレンジの魚を交互に置く
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/YPZT8_Vcx"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
+      </h3>
+      <code
+        data-gist-id="3a3239c7eac6bff85be5bcc70d9ef38b"
+        data-gist-highlight-line="1-3, 15"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.135</span>
+        本文のコード
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/OcGD7t_44"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
+      </h3>
+      <code
+        data-gist-id="820125158f435ecccf652953e5127048"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.136</span>
+        本文のコード
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/VSasZ0Ke4"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
+      </h3>
+      <p>
+        実行後、キャンバスを一度クリックするのを忘れないようにしてください。「a」のキー以外を押すとコンソールに変数keyの値が表示されます。
+      </p>
+      <code
+        data-gist-id="449d7b626aa4f35607ea7f1c3acb5463"
+        data-gist-highlight-line="1-3, 10"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.136</span>
+        コード7.2 左右の矢印キーでピゴニャンを動かす
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/BxgzbW2uG"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
+      </h3>
+      <code
+        data-gist-id="beb2879308f3f539e7fff07698ee1d20"
+        data-gist-highlight-line="1-3, 16"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.137</span>
+        図7.14 ［構文］ break文（の例）
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/Kq6pnsbzD"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
+      </h3>
+      <code
+        data-gist-id="54b69714617b61115977271e3df9b794"
+        data-gist-highlight-line="1-3, 15"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.138</span>
+        コード7.3 break文の例
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/XzvJk9Odk"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
+      </h3>
+      <code
+        data-gist-id="51ba4f3ca1d0aca324fc83ec5eb3f1c2"
+        data-gist-highlight-line="1-3, 22"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.138</span>
+        コード7.4 入力イベント＋break文
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/ipH2_b7nn"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
+      </h3>
+      <code
+        data-gist-id="ab934a470d761535b64833fc2b5c0e04"
+        data-gist-highlight-line="1-3, 14"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.138</span>
+        図7.15 ［構文］ continue文（の例）
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/_Ay2HvtwO"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
+      </h3>
+      <code
+        data-gist-id="8a88bbd923d876a343812fec19a4e215"
+        data-gist-highlight-line="1-3, 15"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <nobr>
+          <span>p.139</span>
+          コード7.5 continue文の例、<wbr />コード7.6
+          while文の中でcontinue文を使うときの注意点
+          <a
+            href="https://editor.p5js.org/p5nyan/sketches/0R1-NnLu3"
+            target="_blank"
+            rel="noopener"
+            class="p5link"
+            >p5.js</a
+          >
+        </nobr>
+      </h3>
+      <p>
+        コード7.5は12行目のコードをコメントアウトしたもの（コード7.6は12行目の追加のみ）。
+      </p>
+      <code
+        data-gist-id="052915568bdd2b85b02f915ce609a963"
+        data-gist-highlight-line="1-3, 24"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h2 id="ex">練習問題</h2>
+
+      <p>
+        練習問題に挑戦して、本レッスンの内容がどのくらい理解できているか確認してみましょう。
+      </p>
+
+      <p>
+        <br />
+        <mark>/* */</mark>
+        でコメントアウトされている部分は問題文なのでコピペしなくても構いませんが、コードに含めておくと参考になります。
+      </p>
+
+      <code
+        data-gist-id=""
+        data-gist-highlight-line=""
+        data-gist-hide-footer="true"
+      ></code>
+
+      <p class="question">
+        このコードを実行すると、下図のように色違いの3匹の魚が描画されます。
+      </p>
+
+      <figure>
+        <img src="fig/" width="500" />
+      </figure>
+
+      <details>
+        <summary>解答例（クリックしてね）</summary>
+        <p>
+          解答 “例”
+          なので、まったく同じである必要はありません。与えられた条件のとおり動作すれば、そのコードも正解です。
+        </p>
+        <code data-gist-id="" data-gist-hide-footer="true"></code>
+      </details>
+    </main>
+
+    <footer>
+      『 はじめての “文字で打ちこむ” プログラミングの本 』 サポートサイト
+    </footer>
+
+    <script src="codeNav.js" type="module"></script>
+  </body>
+</html>

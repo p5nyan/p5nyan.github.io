@@ -52,7 +52,7 @@ h2::after {
 div.link {
   margin: 0.5em 1em;
   background-color: var(--orange);
-  border-radius: 1.5em;
+  border-radius: 2em;
 }
 
 div.link a {

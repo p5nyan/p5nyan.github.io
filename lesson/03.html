@@ -20,27 +20,55 @@
       <p>〜 関数呼び出し 〜</p>
     </header>
 
-    <nav><a href="../index.html">🔙</a></nav>
+    <nav class="back">
+      <a href="../index.html">🔙</a>
+      <a href="#">🔝</a>
+    </nav>
 
     <main>
       <h2>サンプルコード</h2>
 
-      <p>
-        サポートサイトでは、<mark>function draw() { ... }</mark>
-        の中のコードは省略せずにすべて<ruby>載<rt>の</rt></ruby
-        >せています。本に載っているのは<mark class="highlight"
-          >薄黄色の背景色</mark
-        >が付いた部分です。背景色が全くないコードは全文が本に載っているものです。<br />
-        <span>p5.js</span>
-        という部分をクリックするとp5.jsのウェブエディターが開き、プログラムを実行してみることができます。
-      </p>
+      <ul>
+        <li>
+          サポートサイトでは、<mark>async function draw() { ... }</mark>
+          の中のコードは省略せずにすべて<ruby>載<rt>の</rt></ruby
+          >せています。
+        </li>
+        <li>
+          本に載っていない部分には<span class="gray">灰色の背景色</span
+          >を付けています。
+        </li>
+        <li>
+          先頭2行のおまじないと
+          <mark>function setup() { ... }</mark>
+          は省略しますが、みなさんのコードからは消さないでください。
+        </li>
+        <li>
+          ここに載せているサンプルコードには、コードが読み取りやすいように「空行」を追加しています。
+        </li>
+        <li>
+          キャプション横の
+          <span class="p5link">p5.js</span>
+          をクリックするとp5.jsのウェブエディターが開き、プログラムを実行することができます。
+        </li>
+      </ul>
+
+      <nav class="codeNav">
+        <select id="codeSelect">
+          <option value="init" selected disabled>サンプルコードを選ぶ</option>
+        </select>
+        <label for="codeSelect">▼</label>
+      </nav>
 
       <h3 class="caption">
-        <span>p.42</span>図3.1：歩いてしゃべる比較コード
+        <span>p.42</span>
+        図3.1：歩いてしゃべる比較コード
         <a
           href="https://editor.p5js.org/p5nyan/sketches/bSOx1Ifi5"
           target="_blank"
           rel="noopener"
+          class="p5link"
+          class="p5link"
           >p5.js</a
         >
       </h3>
@@ -50,23 +78,21 @@
       >
       </code>
 
-      <p>
-        ここから下では、先頭の2行のおまじないと（変更がない場合の）function
-        setup { ... } の部分は省略します。
-      </p>
-
       <h3 class="caption">
-        <span>p.52</span>本文中のコード
+        <span>p.52</span>
+        本文中のコード
         <a
           href="https://editor.p5js.org/p5nyan/sketches/_deF9_9jx"
           target="_blank"
           rel="noopener"
+          class="p5link"
+          class="p5link"
           >p5.js</a
         >
       </h3>
       <code
         data-gist-id="d7010195050da31e575a9f192a496312"
-        data-gist-highlight-line="4-5,7-8,10-12"
+        data-gist-highlight-line="1-3, 13"
         data-gist-hide-footer="true"
       ></code>
 
@@ -76,6 +102,8 @@
           href="https://editor.p5js.org/p5nyan/sketches/INETKvQ_V"
           target="_blank"
           rel="noopener"
+          class="p5link"
+          class="p5link"
           >p5.js</a
         >
       </h3>
@@ -91,6 +119,8 @@
           href="https://editor.p5js.org/p5nyan/sketches/odPz9s80o"
           target="_blank"
           rel="noopener"
+          class="p5link"
+          class="p5link"
           >p5.js</a
         >
       </h3>
@@ -106,6 +136,8 @@
           href="https://editor.p5js.org/p5nyan/sketches/KgKhNzF8y"
           target="_blank"
           rel="noopener"
+          class="p5link"
+          class="p5link"
           >p5.js</a
         >
       </h3>
@@ -121,6 +153,8 @@
           href="https://editor.p5js.org/p5nyan/sketches/L6LwAwoM0"
           target="_blank"
           rel="noopener"
+          class="p5link"
+          class="p5link"
           >p5.js</a
         >
       </h3>
@@ -136,12 +170,14 @@
           href="https://editor.p5js.org/p5nyan/sketches/Sn3EFoPHv"
           target="_blank"
           rel="noopener"
+          class="p5link"
+          class="p5link"
           >p5.js</a
         >
       </h3>
       <code
         data-gist-id="5b9ba1579e23c15122ae08e8bb73ff37"
-        data-gist-highlight-line="8-14"
+        data-gist-highlight-line="1-7, 15"
         data-gist-hide-footer="true"
       ></code>
 
@@ -152,6 +188,8 @@
           href="https://editor.p5js.org/p5nyan/sketches/3Rw52rbfF"
           target="_blank"
           rel="noopener"
+          class="p5link"
+          class="p5link"
           >p5.js</a
         >
       </h3>
@@ -163,11 +201,18 @@
       <h3 class="caption">
         <span>p.61</span>
         コード3.5 関数の呼び出しの順序
-        <a href="" target="_blank" rel="noopener">p5.js</a>
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/iUpQk30H7"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          class="p5link"
+          >p5.js</a
+        >
       </h3>
       <code
         data-gist-id="c2e6c60a2b1b3bd612ecf3443d7a8ece"
-        data-gist-highlight-line="6-7"
+        data-gist-highlight-line="1-5, 8"
         data-gist-hide-footer="true"
       ></code>
 
@@ -178,27 +223,40 @@
       </p>
 
       <p>
-        新しい「ピゴニャンのスケッチ」を用意して、まずは次のコードをコピペしてください。念のため全コードを表示していますが、書き写すのは薄黄色背景の4行だけです。
-        <br />
+        新しい「ピゴニャンのスケッチ」を用意して、まずは次のコードをコピペしてください。念のため全コードを表示していますが、書き写すのは
+        <mark>// 魚を配置</mark> から下の4行だけです。
         <mark>/* */</mark>
         でコメントアウトされている部分は問題文なのでコピペしなくても構いませんが、コードに含めておくと参考になります。
       </p>
 
       <code
         data-gist-id="26813f3dd70a782841d6d01f9c251edd"
-        data-gist-highlight-line="12-16"
         data-gist-hide-footer="true"
       ></code>
 
-      <p>このコードを実行すると、下図のように色違いの3匹の魚が描画されます。</p>
+      <p class="question">
+        このコードを実行すると、下図のように色違いの3匹の魚が描画されます。
+      </p>
 
       <!-- 図3.20: 練習問題 -->
       <figure>
         <img src="fig/03ex-1.png" width="500" />
       </figure>
 
+      <p class="question">
+        ピゴニャンを動かして、この3匹の魚を食べさせましょう。実行例はこちら →
+        <a
+          href="https://editor.p5js.org/p5nyan/full/NfgqNtyHH"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          class="p5link"
+          >p5.js</a
+        >
+      </p>
       <p>
-        ピゴニャンを動かして、この3匹の魚を食べさせましょう。コードや図の中に書いてあるように、使う関数と移動回数、歩数は指定されています。<br />
+        使用する関数と移動回数、歩数は図やコメントに指定されたとおりとします。
+        <br />
         ヒントは次のとおりです。
       </p>
       <ol>
@@ -234,5 +292,7 @@
     <footer>
       『 はじめての “文字で打ちこむ” プログラミングの本 』 サポートサイト
     </footer>
+
+    <script src="codeNav.js" type="module"></script>
   </body>
 </html>
