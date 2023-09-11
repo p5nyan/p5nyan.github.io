@@ -32,6 +32,10 @@ header p {
   font-size: 1.3em;
 }
 
+p {
+  margin-right: 20px;
+}
+
 h2 {
   background-color: teal;
   color: white;
@@ -120,6 +124,33 @@ ul li:not(:last-of-type) {
   margin-bottom: 0.5em;
   padding-bottom: 0.5em;
   border-bottom: dotted 2px var(--green);
+}
+
+table,
+th,
+td {
+  box-sizing: border-box;
+  border: solid 1px var(--green);
+  border-collapse: collapse;
+}
+
+table {
+  border-width: 3px;
+  margin-right: 20px;
+}
+
+th {
+  background-color: azure;
+  border-bottom-width: 2px;
+}
+
+td {
+  padding: 0.5em;
+  width: 40%;
+}
+
+td.page {
+  width: 20%;
 }
 
 footer {

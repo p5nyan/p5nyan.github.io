@@ -17,7 +17,7 @@
   <body>
     <header>
       <h1>レッスン 12</h1>
-      <p>〜 〜</p>
+      <p>〜 引数ありの関数定義 〜</p>
     </header>
 
     <nav class="back">
@@ -61,31 +61,325 @@
       </nav>
 
       <h3 class="caption">
-        <span></span>
-
-        <a href="" target="_blank" rel="noopener" class="p5link">p5.js</a>
+        <span>p.228</span>
+        図12.4 ［構文］ 関数定義（引数あり、戻り値なし）
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/YUXPB4INm"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
       </h3>
       <code
-        data-gist-id=""
+        data-gist-id="35b59c28e33a884b913488b5d9f5a263"
         data-gist-highlight-line=""
-        data-gist-line=""
         data-gist-hide-footer="true"
       ></code>
 
-      <p>
-        ここから下では、先頭の2行のおまじないと（変更がない場合の）function
-        setup { ... } の部分は省略します。
-      </p>
+      <h3 class="caption">
+        <nobr>
+          <span>p.229</span>
+          コード12.3 myWalk関数の定義に引数を追加する、<wbr />図12.6
+          引数ありの関数定義の比較コード
+          <a
+            href="https://editor.p5js.org/p5nyan/sketches/Y-erZ-YxG"
+            target="_blank"
+            rel="noopener"
+            class="p5link"
+            >p5.js</a
+          >
+        </nobr>
+      </h3>
+      <p>コード12.3と図12.6のコードは同じ物です。</p>
+      <code
+        data-gist-id="67156e899d9d1457b5f8100860bc63d1"
+        data-gist-hide-footer="true"
+      ></code>
 
       <h3 class="caption">
-        <span></span>
-
-        <a href="" target="_blank" rel="noopener" class="p5link">p5.js</a>
+        <nobr>
+          <span>p.230</span>
+          コード12.4 仮引数を追加して引数を増やす、<wbr />コード12.5
+          上下交互に進ませる
+          <a
+            href="https://editor.p5js.org/p5nyan/sketches/dVl4QntFC"
+            target="_blank"
+            rel="noopener"
+            class="p5link"
+            >p5.js</a
+          >
+        </nobr>
       </h3>
       <code
-        data-gist-id=""
+        data-gist-id="6f0c36a252d263d396b34c9b6f15dadb"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.230-231</span>
+        本文のコード
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/z9xEQORxz"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
+      </h3>
+      <p>
+        配列とオブジェクトをそれぞれ引数にしたものを同じコードに入れるため、関数名をそれぞれmyWalkArrayとmyWalkObjectにしています。
+      </p>
+      <code
+        data-gist-id="d0b854b5e287c738f714947c46cdfd8f"
+        data-gist-highlight-line="1-5, 7, 9-13, 22"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.231</span>
+        コード12.6 配列を変数に入れてから引数にするときの注意点
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/0hnmzSyL0"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
+      </h3>
+      <p>
+        引数が配列（やオブジェクト）でなければ、関数呼び出し先で値が書きかえられても、呼び出し元の変数の値は変わりません。引数が配列やオブジェクトのときのみ、関数の中で本体のデータも書きかえられてしまいます。
+      </p>
+      <code
+        data-gist-id="8e81a34852824df76b614261dc2e3852"
+        data-gist-highlight-line="1-3, 9-10"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.232</span>
+        コード12.7 同じ名前の実引数と仮引数
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/Adi1YH5pE"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
+      </h3>
+      <code
+        data-gist-id="5a3cd07d60a1ee967f4d7cda68c615e6"
         data-gist-highlight-line=""
-        data-gist-line=""
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.232</span>
+        コード12.8 異なる関数では同名の変数を宣言できる
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/3KvGjlQ1u"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
+      </h3>
+      <code
+        data-gist-id="34c559a502882e4f60a327e3115de3b4"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.233</span>
+        図12.12 ブロックと変数宣言
+        <a href="" target="_blank" rel="noopener" class="p5link">p5.js</a>
+      </h3>
+      <p>
+        変数宣言がエラーになるかどうかを確認するサンプルコードなので、実行しても何も起こりません。4行目をコメントアウトすると、7行目・12行目の変数xの宣言がエラーにならないことが確認できます。
+      </p>
+      <code
+        data-gist-id="9d4043304b86488d3cf60c0ec7237700"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.234</span>
+        図12.13 ブロックスコープの概念図
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/h56KsEeqd"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
+      </h3>
+      <p>
+        14行目でエラーは出ますが、そのまま実行することができます。13行目までのprint関数はすべてコンソールに値を出力します。
+      </p>
+      <code
+        data-gist-id="744c18da1a1d6df761875052a8895ffb"
+        data-gist-highlight-line="1, 15"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.235</span>
+        図12.15 if文とスコープ
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/yKKCcjTsO"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
+      </h3>
+      <p>
+        9行目でエラーは出ますが、そのまま実行することができます。8行目までのprint関数はすべてコンソールに値を出力します。
+      </p>
+      <code
+        data-gist-id="38261e37fbbb4e2335778b21193330c8"
+        data-gist-highlight-line="1, 10"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.235</span>
+        図12.16 for文とスコープ
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/YdHsrVkK2"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
+      </h3>
+      <p>
+        10行目でエラーは出ますが、そのまま実行することができます。9行目までのprint関数はすべてコンソールに値を出力します。
+      </p>
+      <code
+        data-gist-id="d6777677f1b3b9dca1afff09f3e497b5"
+        data-gist-highlight-line="1, 11"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.236</span>
+        図12.17 関数スコープ
+        <a
+          href=" https://editor.p5js.org/p5nyan/sketches/NuhyTnTQh"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
+      </h3>
+      <code
+        data-gist-id="e56a472010aaee153ed8bdaf798f1420"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.236</span>
+        コード12.9 関数の呼び出し元だけで宣言した変数
+        <a href="" target="_blank" rel="noopener" class="p5link">p5.js</a>
+      </h3>
+      <p>エラーになるコードです。</p>
+      <code
+        data-gist-id="abf6ca5fbcedf696f63dd82a5101074a"
+        data-gist-highlight-line=""
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.238</span>
+        コード12.10 コードの先頭で宣言する
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/ARMJioD9E"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
+      </h3>
+      <code
+        data-gist-id="b9e0a8841ef88fce136a8bbba4eefa19"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.238</span>
+        コード12.11 グローバル変数があれば関数の引数は要らない......?
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/Be2vpoVTv"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
+      </h3>
+      <p>
+        コードが読み取りやすいよう、グローバル変数の宣言場所を本から変更しています（すべての関数定義の外側なら、どこで宣言してもグローバル変数となります）。このサンプルコードのプログラムは意図どおり動きますが、関数の引数が使えるところは引数を使うのが良い作法です。
+      </p>
+      <code
+        data-gist-id="0c09d3b51f221f432d253197eab48946"
+        data-gist-highlight-line="1-4"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <nobr>
+          <span>p.239-240</span>
+          コード12.12 図12.21のコードのdraw関数、<wbr />コード12.13
+          キー入力で色を変える、<wbr />コード12.14
+          ダブルクリックで歩行と停止を切り替える
+          <a
+            href="https://editor.p5js.org/p5nyan/sketches/Dd71DTt2d"
+            target="_blank"
+            rel="noopener"
+            class="p5link"
+            >p5.js</a
+          >
+        </nobr>
+      </h3>
+      <code
+        data-gist-id="50e3dcfc43cde7f5a8841c0786523b27"
+        data-gist-highlight-line="5-8"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <nobr>
+          <span>p.242コラム</span>
+          コードC12.a〜b デフォルト引数
+          <a
+            href="https://editor.p5js.org/p5nyan/sketches/mojbo7Oj9"
+            target="_blank"
+            rel="noopener"
+            class="p5link"
+            >p5.js</a
+          >
+        </nobr>
+      </h3>
+      <code
+        data-gist-id="5f1b20fa2074fddce15e2539a270b06f"
+        data-gist-highlight-line="1-3, 8-9, 19"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.242-243コラム</span>
+        コードC12.c〜d デフォルト引数の呼び出し
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/_m9fadgl8"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
+      </h3>
+      <code
+        data-gist-id="0675ad506e5443916f1cf7941881923c"
+        data-gist-highlight-line="1-3, 15"
         data-gist-hide-footer="true"
       ></code>
 

@@ -17,7 +17,7 @@
   <body>
     <header>
       <h1>レッスン 11</h1>
-      <p>〜 〜</p>
+      <p>〜 関数定義 〜</p>
     </header>
 
     <nav class="back">
@@ -61,31 +61,262 @@
       </nav>
 
       <h3 class="caption">
-        <span></span>
-
-        <a href="" target="_blank" rel="noopener" class="p5link">p5.js</a>
+        <span>p.206</span>
+        図11.6 ［構文］ 関数定義(引数なし、戻り値なし)
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/to89YKXRm"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
       </h3>
+      <p>
+        関数定義の記述は
+        <mark>async function draw() { ... }</mark>
+        の上に置いても下に置いてもかまいません。
+      </p>
       <code
-        data-gist-id=""
-        data-gist-highlight-line=""
-        data-gist-line=""
+        data-gist-id="7cf23da85eae81509adb5fa20bb0a705"
+        data-gist-highlight-line="12-13"
         data-gist-hide-footer="true"
       ></code>
 
+      <h3 class="caption">
+        <span>p.207</span>
+        図11.7 関数定義（引数なし・戻り値なしの比較コード）
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/V8TSAVZWg"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
+      </h3>
       <p>
-        ここから下では、先頭の2行のおまじないと（変更がない場合の）function
-        setup { ... } の部分は省略します。
+        「図11.9
+        自分で定義した関数を使ったサンプルコード」に記述されている関数呼び出しを含みます。
       </p>
+      <code
+        data-gist-id="5c2c7db1ee2fd14fcad1c43092b6585f"
+        data-gist-hide-footer="true"
+      ></code>
 
       <h3 class="caption">
-        <span></span>
-
-        <a href="" target="_blank" rel="noopener" class="p5link">p5.js</a>
+        <span>p.209発展</span>
+        コード11.1 awaitの付いた関数の呼び出し
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/Srw035j90"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
       </h3>
       <code
-        data-gist-id=""
+        data-gist-id="57905146c16a5ef61d125716b397cb3a"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.211</span>
+        コード11.2 ランダムな位置に魚を配置する
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/zz-knURzF"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
+      </h3>
+      <p>
+        これは関数に切り出す前の状態で、次のコード11.3、11.4のベースになるサンプルコードです。
+      </p>
+      <code
+        data-gist-id="52056fa081bc894f144afa379b5c7049"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <nobr>
+          <span>p.211</span>
+          コード11.3 魚の処理を関数に切り出す、<wbr />コード11.4
+          自作関数を呼び出す
+          <a
+            href="https://editor.p5js.org/p5nyan/sketches/UABGoIVX_"
+            target="_blank"
+            rel="noopener"
+            class="p5link"
+            >p5.js</a
+          >
+        </nobr>
+      </h3>
+      <p>上のコード11.2を切り貼りしていきます。</p>
+      <code
+        data-gist-id="406b54cd71539d28013cc3a369279e1b"
+        data-gist-highlight-line="6-10"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.212</span>
+        コード11.5 魚を配置した後でピゴニャンをランダムに動かす
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/Rf7Y6V9zZ"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
+      </h3>
+      <p>
+        コード内にもコメントしていますが、コード11.5の内容からさらに関数を切り出していく作業が始まります。
+      </p>
+      <code
+        data-gist-id="627bfb4e6047a677b59e9a92a3fab6ee"
+        data-gist-highlight-line="1-9, 19-26"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <nobr>
+          <span>p.212</span>
+          コード11.6 処理の一部を関数に切り出す、<wbr />コード11.7
+          関数の呼び出し側(for文の部分のみ)
+          <a
+            href="https://editor.p5js.org/p5nyan/sketches/OUmN_d-Z9"
+            target="_blank"
+            rel="noopener"
+            class="p5link"
+            >p5.js</a
+          >
+        </nobr>
+      </h3>
+      <p>
+        灰色背景のコードも含めると「コード11.8 全体のコード」と同じものです。
+      </p>
+      <code
+        data-gist-id="3386f17b19d23d6ae6bcfcfe004a5027"
+        data-gist-highlight-line="1-9, 16-17, 24-30"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <nobr>
+          <span>p.214</span>
+          コード11.10
+          自作関数(randomTurn)の中から自作関数(putMyFish)を呼び出す、<wbr />図11.14
+          自作関数から自作関数を呼び出す
+          <a
+            href="https://editor.p5js.org/p5nyan/sketches/6xVpNwKhp"
+            target="_blank"
+            rel="noopener"
+            class="p5link"
+            >p5.js</a
+          >
+        </nobr>
+      </h3>
+      <p>
+        上のサンプルコードから追加されたのは25行目の1コードだけですが、関連する部分をすべてハイライトしています。「コード11.10」と「図11.14」のコードは同じものです。
+      </p>
+      <code
+        data-gist-id="4f261d3ca4ec2661f699e7346a6eb591"
+        data-gist-highlight-line="1-5, 7-11, 13-18, 27"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.216</span>
+        コード11.11
+        while文を使った入力イベント(マウスクリック)に反応するプログラム
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/BxePWPkpq"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
+      </h3>
+      <p>レッスン7で学んだ内容です。</p>
+      <code
+        data-gist-id="3dbe88f91c081243e53ce44ac6669676"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.217</span>
+        図11.19 マウスクリックでネコの色を変える比較コード
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/mU4IWmBlz"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
+      </h3>
+      <p>図11.18のコードと同じものです。</p>
+      <code
+        data-gist-id="3dba6351bb908973ca962436b4c3b8e7"
         data-gist-highlight-line=""
-        data-gist-line=""
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <nobr>
+          <span>p.218</span>
+          コード11.12 マウスボタンを区別する、<wbr />コード11.14
+          入力されたキーを区別する
+          <a
+            href="https://editor.p5js.org/p5nyan/sketches/vBc-9BLXW"
+            target="_blank"
+            rel="noopener"
+            class="p5link"
+            >p5.js</a
+          >
+        </nobr>
+      </h3>
+      <p>コード11.13は、コード11.14への途中のコードなので省略します。</p>
+      <code
+        data-gist-id="61badeb91bb5c6dbd367040415ad6f5b"
+        data-gist-highlight-line="1-8, 16"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.220</span>
+        コード11.16 マウスホイールの回転に合わせてピゴニャンが動く
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/pzhgPNb12"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
+      </h3>
+      <p>おもしろいのでぜひ動かしてみてね。</p>
+      <code
+        data-gist-id="89b44c71fe26ee2e384b1e5faffbfadc"
+        data-gist-highlight-line="1-5"
+        data-gist-hide-footer="true"
+      ></code>
+
+      <h3 class="caption">
+        <span>p.222-223コラム</span>
+        コードC11.a〜d JavaScriptとイベントハンドラー（イベントリスナー）
+        <a
+          href="https://editor.p5js.org/p5nyan/sketches/Y7xRmpnDs"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
+      </h3>
+      <p>
+        コード中のコメントにも書いていますが、addEventListenerメソッドの呼び出しはdraw関数やsetup関数の外でもかまいません（実行時に呼び出されさえすればOK）。
+      </p>
+      <code
+        data-gist-id="f0c31b4469d557c16358e512a0d4b4c1"
+        data-gist-highlight-line=""
         data-gist-hide-footer="true"
       ></code>
 
