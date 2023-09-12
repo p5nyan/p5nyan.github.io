@@ -96,6 +96,25 @@ h3 {
   margin-top: 2.5rem;
 }
 
+figure.demo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-auto-flow: column;
+  column-gap: 10vw;
+  justify-items: center;
+}
+
+figure.demo a:first-of-type img {
+  max-width: 400px;
+  width: 40vw;
+}
+
+figure.demo a:last-of-type img {
+  max-width: 300px;
+  width: 30vw;
+}
+
 ul {
   margin-right: 2em;
   padding-left: 1em;

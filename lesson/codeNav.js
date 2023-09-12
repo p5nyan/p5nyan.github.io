@@ -1,12 +1,14 @@
-const h3List = Array.from(document.getElementsByClassName('caption'));
+const h4List = Array.from(document.getElementsByClassName('caption'));
+
 let cnt = 0;
-for (const h3 of h3List) {
-  h3.id = 'code' + cnt;
+for (const h4 of h4List) {
+  h4.id = 'code' + cnt;
   cnt += 1;
 }
+
 const select = document.querySelector('.codeNav select');
-for (const h3 of h3List) {
-  let el = h3.firstElementChild;
+for (const h4 of h4List) {
+  let el = h4.firstElementChild;
   if (el.tagName == 'NOBR') {
     el = el.firstElementChild;
   }
@@ -20,7 +22,7 @@ for (const h3 of h3List) {
   }
 
   const opt = document.createElement('option');
-  opt.value = h3.id;
+  opt.value = h4.id;
   opt.appendChild(span);
   opt.appendChild(text);
   select.appendChild(opt);

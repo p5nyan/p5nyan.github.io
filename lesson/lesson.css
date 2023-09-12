@@ -168,18 +168,22 @@ h2::after {
   border-radius: 1em;
 }
 
-h3.caption {
+h4.caption {
   color: darkslateblue;
   font-size: 1rem;
   margin: 3rem 0 5px;
 }
 
-:is(h3, .question) a {
+h3 + h4.caption {
+  margin-top: 2rem;
+}
+
+:is(h4, .question) a {
   text-decoration: none;
   color: black;
 }
 
-h3.caption span {
+h4.caption span {
   background-color: teal;
   color: white;
   font-size: 0.8rem;
@@ -189,13 +193,15 @@ h3.caption span {
   margin-right: 0.5em;
 }
 
-h3:not(.caption) {
-  border-left: solid 0.5em var(--pink);
-  padding-left: 0.5em;
-  margin-top: 2.5rem;
+h3 {
+  border-left: solid 1.2em var(--orange);
+  border-right: solid 1.2em var(--orange);
+  padding: 0.5em;
+  margin-top: 4rem;
+  border-radius: 1.25em;
 }
 
-h3 + p {
+h4.caption + p {
   font-size: 0.8em;
   line-height: 1.5;
 }

@@ -30,18 +30,13 @@
 
       <ul>
         <li>
-          サポートサイトでは、<mark>async function draw() { ... }</mark>
-          の中のコードは省略せずにすべて<ruby>載<rt>の</rt></ruby
+          サポートサイトでは、先頭2行のおまじないとsetup関数の定義以外はすべて省略せずに<ruby
+            >載<rt>の</rt></ruby
           >せています。
         </li>
         <li>
           本に載っていない部分には<span class="gray">灰色の背景色</span
           >を付けています。
-        </li>
-        <li>
-          先頭2行のおまじないと
-          <mark>function setup() { ... }</mark>
-          は省略しますが、みなさんのコードからは消さないでください。
         </li>
         <li>
           ここに載せているサンプルコードには、コードが読み取りやすいように「空行」を追加しています。
@@ -60,7 +55,9 @@
         <label for="codeSelect">▼</label>
       </nav>
 
-      <h3 class="caption">
+      <h3>12.1 引数ありの関数を定義する</h3>
+
+      <h4 class="caption">
         <span>p.228</span>
         図12.4 ［構文］ 関数定義（引数あり、戻り値なし）
         <a
@@ -70,14 +67,14 @@
           class="p5link"
           >p5.js</a
         >
-      </h3>
+      </h4>
       <code
         data-gist-id="35b59c28e33a884b913488b5d9f5a263"
         data-gist-highlight-line=""
         data-gist-hide-footer="true"
       ></code>
 
-      <h3 class="caption">
+      <h4 class="caption">
         <nobr>
           <span>p.229</span>
           コード12.3 myWalk関数の定義に引数を追加する、<wbr />図12.6
@@ -90,14 +87,14 @@
             >p5.js</a
           >
         </nobr>
-      </h3>
+      </h4>
       <p>コード12.3と図12.6のコードは同じ物です。</p>
       <code
         data-gist-id="67156e899d9d1457b5f8100860bc63d1"
         data-gist-hide-footer="true"
       ></code>
 
-      <h3 class="caption">
+      <h4 class="caption">
         <nobr>
           <span>p.230</span>
           コード12.4 仮引数を追加して引数を増やす、<wbr />コード12.5
@@ -110,13 +107,13 @@
             >p5.js</a
           >
         </nobr>
-      </h3>
+      </h4>
       <code
         data-gist-id="6f0c36a252d263d396b34c9b6f15dadb"
         data-gist-hide-footer="true"
       ></code>
 
-      <h3 class="caption">
+      <h4 class="caption">
         <span>p.230-231</span>
         本文のコード
         <a
@@ -126,7 +123,7 @@
           class="p5link"
           >p5.js</a
         >
-      </h3>
+      </h4>
       <p>
         配列とオブジェクトをそれぞれ引数にしたものを同じコードに入れるため、関数名をそれぞれmyWalkArrayとmyWalkObjectにしています。
       </p>
@@ -136,7 +133,7 @@
         data-gist-hide-footer="true"
       ></code>
 
-      <h3 class="caption">
+      <h4 class="caption">
         <span>p.231</span>
         コード12.6 配列を変数に入れてから引数にするときの注意点
         <a
@@ -146,7 +143,7 @@
           class="p5link"
           >p5.js</a
         >
-      </h3>
+      </h4>
       <p>
         引数が配列（やオブジェクト）でなければ、関数呼び出し先で値が書きかえられても、呼び出し元の変数の値は変わりません。引数が配列やオブジェクトのときのみ、関数の中で本体のデータも書きかえられてしまいます。
       </p>
@@ -156,7 +153,7 @@
         data-gist-hide-footer="true"
       ></code>
 
-      <h3 class="caption">
+      <h4 class="caption">
         <span>p.232</span>
         コード12.7 同じ名前の実引数と仮引数
         <a
@@ -166,14 +163,14 @@
           class="p5link"
           >p5.js</a
         >
-      </h3>
+      </h4>
       <code
         data-gist-id="5a3cd07d60a1ee967f4d7cda68c615e6"
         data-gist-highlight-line=""
         data-gist-hide-footer="true"
       ></code>
 
-      <h3 class="caption">
+      <h4 class="caption">
         <span>p.232</span>
         コード12.8 異なる関数では同名の変数を宣言できる
         <a
@@ -183,17 +180,19 @@
           class="p5link"
           >p5.js</a
         >
-      </h3>
+      </h4>
       <code
         data-gist-id="34c559a502882e4f60a327e3115de3b4"
         data-gist-hide-footer="true"
       ></code>
 
-      <h3 class="caption">
+      <h3>12.2 変数のスコープ</h3>
+
+      <h4 class="caption">
         <span>p.233</span>
         図12.12 ブロックと変数宣言
         <a href="" target="_blank" rel="noopener" class="p5link">p5.js</a>
-      </h3>
+      </h4>
       <p>
         変数宣言がエラーになるかどうかを確認するサンプルコードなので、実行しても何も起こりません。4行目をコメントアウトすると、7行目・12行目の変数xの宣言がエラーにならないことが確認できます。
       </p>
@@ -202,7 +201,7 @@
         data-gist-hide-footer="true"
       ></code>
 
-      <h3 class="caption">
+      <h4 class="caption">
         <span>p.234</span>
         図12.13 ブロックスコープの概念図
         <a
@@ -212,7 +211,7 @@
           class="p5link"
           >p5.js</a
         >
-      </h3>
+      </h4>
       <p>
         14行目でエラーは出ますが、そのまま実行することができます。13行目までのprint関数はすべてコンソールに値を出力します。
       </p>
@@ -222,7 +221,7 @@
         data-gist-hide-footer="true"
       ></code>
 
-      <h3 class="caption">
+      <h4 class="caption">
         <span>p.235</span>
         図12.15 if文とスコープ
         <a
@@ -232,7 +231,7 @@
           class="p5link"
           >p5.js</a
         >
-      </h3>
+      </h4>
       <p>
         9行目でエラーは出ますが、そのまま実行することができます。8行目までのprint関数はすべてコンソールに値を出力します。
       </p>
@@ -242,7 +241,7 @@
         data-gist-hide-footer="true"
       ></code>
 
-      <h3 class="caption">
+      <h4 class="caption">
         <span>p.235</span>
         図12.16 for文とスコープ
         <a
@@ -252,7 +251,7 @@
           class="p5link"
           >p5.js</a
         >
-      </h3>
+      </h4>
       <p>
         10行目でエラーは出ますが、そのまま実行することができます。9行目までのprint関数はすべてコンソールに値を出力します。
       </p>
@@ -262,7 +261,7 @@
         data-gist-hide-footer="true"
       ></code>
 
-      <h3 class="caption">
+      <h4 class="caption">
         <span>p.236</span>
         図12.17 関数スコープ
         <a
@@ -272,17 +271,17 @@
           class="p5link"
           >p5.js</a
         >
-      </h3>
+      </h4>
       <code
         data-gist-id="e56a472010aaee153ed8bdaf798f1420"
         data-gist-hide-footer="true"
       ></code>
 
-      <h3 class="caption">
+      <h4 class="caption">
         <span>p.236</span>
         コード12.9 関数の呼び出し元だけで宣言した変数
         <a href="" target="_blank" rel="noopener" class="p5link">p5.js</a>
-      </h3>
+      </h4>
       <p>エラーになるコードです。</p>
       <code
         data-gist-id="abf6ca5fbcedf696f63dd82a5101074a"
@@ -290,7 +289,9 @@
         data-gist-hide-footer="true"
       ></code>
 
-      <h3 class="caption">
+      <h3>12.3 グローバル変数</h3>
+
+      <h4 class="caption">
         <span>p.238</span>
         コード12.10 コードの先頭で宣言する
         <a
@@ -300,13 +301,13 @@
           class="p5link"
           >p5.js</a
         >
-      </h3>
+      </h4>
       <code
         data-gist-id="b9e0a8841ef88fce136a8bbba4eefa19"
         data-gist-hide-footer="true"
       ></code>
 
-      <h3 class="caption">
+      <h4 class="caption">
         <span>p.238</span>
         コード12.11 グローバル変数があれば関数の引数は要らない......?
         <a
@@ -316,7 +317,7 @@
           class="p5link"
           >p5.js</a
         >
-      </h3>
+      </h4>
       <p>
         コードが読み取りやすいよう、グローバル変数の宣言場所を本から変更しています（すべての関数定義の外側なら、どこで宣言してもグローバル変数となります）。このサンプルコードのプログラムは意図どおり動きますが、関数の引数が使えるところは引数を使うのが良い作法です。
       </p>
@@ -326,7 +327,7 @@
         data-gist-hide-footer="true"
       ></code>
 
-      <h3 class="caption">
+      <h4 class="caption">
         <nobr>
           <span>p.239-240</span>
           コード12.12 図12.21のコードのdraw関数、<wbr />コード12.13
@@ -340,14 +341,16 @@
             >p5.js</a
           >
         </nobr>
-      </h3>
+      </h4>
       <code
         data-gist-id="50e3dcfc43cde7f5a8841c0786523b27"
         data-gist-highlight-line="5-8"
         data-gist-hide-footer="true"
       ></code>
 
-      <h3 class="caption">
+      <h3>コラム：デフォルト引数</h3>
+
+      <h4 class="caption">
         <nobr>
           <span>p.242コラム</span>
           コードC12.a〜b デフォルト引数
@@ -359,14 +362,14 @@
             >p5.js</a
           >
         </nobr>
-      </h3>
+      </h4>
       <code
         data-gist-id="5f1b20fa2074fddce15e2539a270b06f"
         data-gist-highlight-line="1-3, 8-9, 19"
         data-gist-hide-footer="true"
       ></code>
 
-      <h3 class="caption">
+      <h4 class="caption">
         <span>p.242-243コラム</span>
         コードC12.c〜d デフォルト引数の呼び出し
         <a
@@ -376,7 +379,7 @@
           class="p5link"
           >p5.js</a
         >
-      </h3>
+      </h4>
       <code
         data-gist-id="0675ad506e5443916f1cf7941881923c"
         data-gist-highlight-line="1-3, 15"
