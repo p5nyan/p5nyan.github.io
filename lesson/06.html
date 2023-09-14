@@ -362,37 +362,56 @@
 
       <h2 id="ex">練習問題</h2>
 
-      <p>
-        練習問題に挑戦して、本レッスンの内容がどのくらい理解できているか確認してみましょう。
-      </p>
+      <h3>基本問題</h3>
+
+      <p class="notyet">準備中</p>
+
+      <h3>発展問題</h3>
 
       <p>
-        <br />
-        <mark>/* */</mark>
-        でコメントアウトされている部分は問題文なのでコピペしなくても構いませんが、コードに含めておくと参考になります。
+        次のコードを書き写して、<mark>/* */</mark>
+        でコメントアウトされた部分の指示どおりにコードを編集してください。
       </p>
 
       <code
-        data-gist-id=""
-        data-gist-highlight-line=""
+        data-gist-id="7c9255ce36a5c841199c0170837d1cbd"
         data-gist-hide-footer="true"
       ></code>
 
       <p class="question">
-        このコードを実行すると、下図のように色違いの3匹の魚が描画されます。
+        このコードを実行すると、魚がランダムな位置に現れ、ピゴニャンは魚の方向を向いて、その座標をしゃべります。<br />
+        魚の現れた位置がキャンバスの左右だった場合、ピゴニャンはその左右方向を向きます。中央だった場合、さらに魚のいる上下方向を向きます。魚と近いときは食べてしまいます。<br />
+        キャンバスの中央とみなす範囲、近いとみなす範囲については、
+        ヒントの図を参考にしてください。
+        <br />
+        実行例はこちら →
+        <a
+          href="https://editor.p5js.org/p5nyan/full/Tn7GcUyo3"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
       </p>
 
-      <figure>
-        <img src="fig/" width="500" />
+      <figure class="L">
+        <img src="fig/ex06-2-1.png" />
+      </figure>
+
+      <p>
+        ヒントを下図に示します。魚が現れたのがキャンバスの左・中央・右のどこなのか、ピゴニャンと魚の距離で判断します。
+      </p>
+
+      <figure class="L">
+        <img src="fig/ex06-2-2.png" />
       </figure>
 
       <details>
         <summary>解答例（クリックしてね）</summary>
-        <p>
-          解答 “例”
-          なので、まったく同じである必要はありません。与えられた条件のとおり動作すれば、そのコードも正解です。
-        </p>
-        <code data-gist-id="" data-gist-hide-footer="true"></code>
+        <code
+          data-gist-id="68c2a9cb8e0448ad33e51ca82858bfb5"
+          data-gist-hide-footer="true"
+        ></code>
       </details>
     </main>
 

@@ -206,6 +206,24 @@ h4.caption + p {
   line-height: 1.5;
 }
 
+figure {
+  margin-left: auto;
+  margin-right: auto;
+  /* width: calc(100vw - 40px); */
+}
+
+figure img {
+  max-width: 100%;
+}
+
+figure.M {
+  max-width: 500px;
+}
+
+figure.L {
+  max-width: 750px;
+}
+
 ol {
   margin-right: 2em;
   padding-left: 1em;
@@ -252,4 +270,12 @@ footer {
   text-align: center;
   color: var(--red);
   font-weight: bold;
+}
+
+p.notyet {
+  color: gray;
+  padding: 1em;
+  border: dashed 1px gray;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }

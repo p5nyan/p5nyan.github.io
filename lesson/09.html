@@ -557,37 +557,47 @@
 
       <h2 id="ex">練習問題</h2>
 
-      <p>
-        練習問題に挑戦して、本レッスンの内容がどのくらい理解できているか確認してみましょう。
-      </p>
+      <h3>基本問題</h3>
+
+      <p class="notyet">準備中</p>
+
+      <h3>発展問題</h3>
 
       <p>
-        <br />
-        <mark>/* */</mark>
-        でコメントアウトされている部分は問題文なのでコピペしなくても構いませんが、コードに含めておくと参考になります。
+        次のコードを書き写して、<mark>/* */</mark>
+        でコメントアウトされた部分の指示どおりにコードを編集してください。
       </p>
 
       <code
-        data-gist-id=""
-        data-gist-highlight-line=""
+        data-gist-id="e034472c68d50735e384faf6251c30e5"
         data-gist-hide-footer="true"
       ></code>
 
       <p class="question">
-        このコードを実行すると、下図のように色違いの3匹の魚が描画されます。
+        このコードを実行すると、3匹の魚がランダムな色で配置され、ピゴニャンがそれを上から順番に食べていきます。魚のy方向の位置は、ちょうどキャンバスの1/5ずつ離れるように配置します。<br />
+        ピゴニャンは、x方向は魚の真上まで3回に分けて、y方向は1回で魚まで到達します。魚を食べたら、その魚の色に変わります。<br />
+        実行例はこちら →
+        <a
+          href="https://editor.p5js.org/p5nyan/full/_H0JaUN5K"
+          target="_blank"
+          rel="noopener"
+          class="p5link"
+          >p5.js</a
+        >
       </p>
 
-      <figure>
-        <img src="fig/" width="500" />
-      </figure>
+      <p>
+        ヒントを下図に示します。魚の位置と色は、最初に配列に入れておきます。その配列を値を順に取り出しながら、ピゴニャンを移動させたり色を変えたりします。
+      </p>
+
+      <figure><img src="fig/ex09-2.png" width="500" /></figure>
 
       <details>
         <summary>解答例（クリックしてね）</summary>
-        <p>
-          解答 “例”
-          なので、まったく同じである必要はありません。与えられた条件のとおり動作すれば、そのコードも正解です。
-        </p>
-        <code data-gist-id="" data-gist-hide-footer="true"></code>
+        <code
+          data-gist-id="07d03fdf4ea944749beae949fa877bac"
+          data-gist-hide-footer="true"
+        ></code>
       </details>
     </main>
 
