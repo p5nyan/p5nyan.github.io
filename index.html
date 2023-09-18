@@ -15,7 +15,7 @@
     />
   </head>
   <body>
-    <header>
+    <header class="toppage">
       <h1>
         <nobr>
           はじめての<wbr />“文字で打ちこむ”<wbr />プログラミングの本<br />
@@ -65,80 +65,8 @@
         </template>
       </div>
 
-      <h2>その他の情報</h2>
-
-      <h3>この本で最後に作るプログラム</h3>
-      <p>
-        画像をクリックしたらデモが開きます。ゲームのほうはカーソルキー（矢印キー）で操作してください。
-      </p>
-      <figure class="demo">
-        <a
-          href="https://editor.p5js.org/p5nyan/full/zuiDfNl4A"
-          target="_blank"
-          rel="noopener"
-          ><img src="./images/game_demo.png" width="400"
-        /></a>
-        <figcaption>ピゴニャンのゲーム</figcaption>
-        <a
-          href="https://editor.p5js.org/p5nyan/full/vG0jqCzKT"
-          target="_blank"
-          rel="noopener"
-          ><img src="./images/animation_demo.png" width="300"
-        /></a>
-        <figcaption>グラフィックスのアニメーション</figcaption>
-      </figure>
-
-      <h3>クリエイティブコーディングについて</h3>
-      <p>この本で紹介した作品については以下のリンクを参照してください。</p>
-      <ul>
-        <li>
-          <a href="https://openprocessing.org/">OpenProcessing</a>
-        </li>
-        <li>
-          <a href="https://openprocessing.org/user/6533/">高尾俊介さんの作品</a>
-        </li>
-        <li>
-          <a href="https://openprocessing.org/user/207560/"
-            >Senbakuさんの作品</a
-          >
-        </li>
-      </ul>
-
-      <h3>エラーメッセージ</h3>
-      <p class="notyet">準備中</p>
-
-      <h3>p5.jsのウェブエディターを使わない方法</h3>
-      <p class="notyet">準備中</p>
-
-      <h3>この本を終えたあとに…</h3>
-      <p>
-        この本を終えて、p5.jsでグラフィックスのアニメーションを作ってみたり、JavaScriptでウェブアプリを作ってみたりしたい人は、著者のオンラインテキストも参考にしてください。<br />
-        「文系大学生のための」と書かれていますが、この本を最後まで読んだ人なら小学生〜高校生でも読めると思います。「p5.js入門」のほうは基本的な文法の復習にもなります。
-      </p>
-      <ul>
-        <li>
-          <a href="https://zenn.dev/ojk/books/intro-to-p5js"
-            >文系大学生のためのp5.js入門</a
-          >
-        </li>
-        <li>
-          <a href="https://zenn.dev/ojk/books/intro-to-javascript"
-            >文系大学生のためのJavaScript入門</a
-          >
-        </li>
-      </ul>
-      <p>
-        JavaScriptについてさらに詳しく知りたい人は、以下のオンラインテキストが参考になります。こちらは「入門書」とありますが、かなり詳しく説明がされています。
-      </p>
-      <ul>
-        <li>
-          <a href="https://jsprimer.net/"
-            >JavaScript Primer 迷わないための入門書</a
-          >
-        </li>
-      </ul>
-
-      <h2>正誤表（間違いの修正）</h2>
+      <h2>正誤表</h2>
+      <p>本の間違いの修正です。</p>
       <table>
         <tr>
           <th class="page">場所</th>
@@ -146,29 +74,150 @@
           <th>正</th>
         </tr>
         <tr>
-          <td class="page">p.96 ミニコラム</td>
+          <td class="page">
+            <span>p.96</span><br />
+            ミニコラム
+          </td>
           <td>
             サンプルコードの実行例（コメント）が「➡
-            -3」など、すべて負の値になっている
+            -3」など、すべて負の値になっている。
           </td>
-          <td>「➡ 3」など、すべて正の値が正しい</td>
+          <td>「➡ 3」など、すべて正の値が正しい。</td>
         </tr>
         <tr>
-          <td class="page">p.298 完成コード40〜41行目</td>
+          <td class="page">
+            <span>p.298</span><br />
+            コード40〜41行目
+          </td>
           <td colspan="2">
-            間違いではないが、ここまでのサンプルコードと条件式のxとyが上下入れ替わっている（結果は同じ）
+            間違いではないが、ここまでのサンプルコードと条件式のxとyが上下（前後）入れ替わっている。結果は同じ。
           </td>
         </tr>
+        <!--
         <tr>
-          <td class="page"></td>
+          <td class="page">
+            <span></span><br />
+          </td>
           <td></td>
           <td></td>
         </tr>
+        -->
       </table>
+
+      <h2>その他の情報</h2>
+
+      <section class="h3">
+        <h3>この本で最後に作るプログラム</h3>
+        <p>
+          画像をクリックしたらデモが開きます。ゲームのほうはカーソルキー（矢印キー）で操作してください。
+        </p>
+        <figure class="demo">
+          <a
+            href="https://editor.p5js.org/p5nyan/full/zuiDfNl4A"
+            target="_blank"
+            rel="noopener"
+            ><img src="./images/game_demo.png" width="400"
+          /></a>
+          <figcaption>ピゴニャンのゲーム</figcaption>
+          <a
+            href="https://editor.p5js.org/p5nyan/full/vG0jqCzKT"
+            target="_blank"
+            rel="noopener"
+            ><img src="./images/animation_demo.png" width="300"
+          /></a>
+          <figcaption>グラフィックスのアニメーション</figcaption>
+        </figure>
+      </section>
+
+      <section class="h3">
+        <h3>クリエイティブコーディングについて</h3>
+        <p>この本で紹介した作品については以下のリンクを参照してください。</p>
+        <ul>
+          <li>
+            <a href="https://openprocessing.org/">OpenProcessing</a>
+          </li>
+          <li>
+            <a href="https://openprocessing.org/user/6533/"
+              >高尾俊介さんの作品</a
+            >
+          </li>
+          <li>
+            <a href="https://openprocessing.org/user/207560/"
+              >Senbakuさんの作品</a
+            >
+          </li>
+        </ul>
+      </section>
+
+      <section class="h3">
+        <h3>エラーメッセージ</h3>
+        <p>p5.jsのエラーメッセージは以下のページにまとめています。</p>
+        <p class="notyet">準備中</p>
+      </section>
+
+      <section class="h3">
+        <h3>この本を終えたあとに…</h3>
+        <p>
+          この本を終えて、p5.jsでグラフィックスのアニメーションを作ってみたり、JavaScriptでウェブアプリを作ってみたりしたい人は、著者のオンラインテキストも参考にしてください。<br />
+          「文系大学生のための…」と書かれていますが、この本を最後まで読んだ人なら小学生〜高校生でも読めると思います。「p5.js入門」のほうは基本的な文法の復習にもなります。
+        </p>
+        <ul>
+          <li>
+            <a href="https://zenn.dev/ojk/books/intro-to-p5js"
+              >文系大学生のためのp5.js入門</a
+            >
+          </li>
+          <li>
+            <a href="https://zenn.dev/ojk/books/intro-to-html-css"
+              >文系大学生のためのHTML／CSS入門</a
+            >
+          </li>
+          <li>
+            <a href="https://zenn.dev/ojk/books/intro-to-javascript"
+              >文系大学生のためのJavaScript入門</a
+            >
+          </li>
+        </ul>
+        <p style="margin-top: 2rem">
+          JavaScriptについてさらに詳しく知りたい人は、以下のオンラインテキストが参考になります。ひとつめは「入門書」と名前にありますが、かなり詳しく説明がされています。
+        </p>
+        <ul>
+          <li>
+            <a href="https://jsprimer.net/"
+              >JavaScript Primer 迷わないための入門書</a
+            >
+          </li>
+          <li>
+            <a href="https://developer.mozilla.org/ja/docs/Web"
+              >開発者向けのウェブ技術 | MDN</a
+            >
+          </li>
+        </ul>
+      </section>
+
+      <section class="h3 nouse-p5">
+        <h3>p5.jsのウェブエディターを使わない方法</h3>
+        <p>
+          学校から配布されているノートパソコンでは、<a
+            href="https://editor.p5js.org/"
+            target="_blank"
+            rel="noopener"
+            >p5.jsのウェブエディター</a
+          >が開かない（ファルタリングされている）場合があります。その場合には、以下の手順にしたがって、ウェブエディターを使わない方法でプログラミングを進めてください。
+        </p>
+
+        <ul>
+          <li>
+            <a href="./without-webeditor.html"
+              >p5.jsのウェブエディターを使わない方法</a
+            >
+          </li>
+        </ul>
+      </section>
     </main>
 
     <footer>
-      <small>最終更新：2023年9月8日（著者 尾関基行）</small>
+      <small>最終更新：2023年9月18日（著者 尾関基行）</small>
     </footer>
 
     <script src="https://unpkg.com/petite-vue" defer init></script>

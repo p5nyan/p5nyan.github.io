@@ -18,7 +18,7 @@ body {
   padding: 0 20px;
 }
 
-header {
+header.toppage {
   background-color: var(--yellow);
   background-image: url(images/header-bg.png);
   background-position: bottom;
@@ -28,7 +28,7 @@ header {
   text-align: center;
 }
 
-header p {
+header.toppage p {
   font-size: 1.3em;
 }
 
@@ -65,35 +65,48 @@ div.link a {
   color: black;
   font-weight: bold;
   padding: 1rem;
+  padding-bottom: 0.95rem;
 }
 
 div.codeLink {
   margin: 0.5rem 1rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem 35px;
+  gap: 1.5rem 35px;
 }
 
 div:is(.codeLink, .link) {
   margin: 0;
 }
 
-@media screen and (min-width: 520px) {
-  div.link {
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  div.codeLink {
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-
 h3 {
+  background-color: var(--pink);
+  padding: 0.5em;
+  border-radius: 1.25em;
+  margin-top: 2.5rem;
+  /*
   border-left: solid 0.5em var(--pink);
   padding-left: 0.5em;
-  margin-top: 2.5rem;
+  */
+}
+
+h3::before {
+  content: '●';
+  color: white;
+  font-size: 0.5em;
+  vertical-align: 0.3em;
+  margin-right: 0.75em;
+  margin-left: 0.5em;
+}
+
+section.h3 p {
+  margin-left: 1em;
+}
+
+section.nouse-p5 p span {
+  background-color: var(--orange);
+  padding: 0.2em 0.75em;
+  border-radius: 0 1.25em 1.25em 0;
 }
 
 figure.demo {
@@ -113,6 +126,10 @@ figure.demo a:first-of-type img {
 figure.demo a:last-of-type img {
   max-width: 300px;
   width: 30vw;
+}
+
+figure.demo figcaption {
+  font-weight: bold;
 }
 
 ul {
@@ -165,11 +182,17 @@ th {
 
 td {
   padding: 0.5em;
-  width: 40%;
+  /* width: 40%; */
 }
 
 td.page {
-  width: 20%;
+  width: 10em;
+}
+
+td.page span {
+  background-color: var(--red);
+  color: white;
+  padding: 0.2em 0.5em;
 }
 
 footer {
@@ -194,4 +217,51 @@ p.alert {
   padding: 1rem;
   margin-left: 1rem;
   margin-right: 1rem;
+}
+
+nav.back {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 1;
+}
+
+/* index.html以外 */
+
+header.page h1 {
+  color: teal;
+  margin-bottom: 2em;
+  margin-top: 1em;
+}
+
+nav.back a {
+  display: block;
+  box-sizing: border-box;
+  width: 2.5em;
+  height: 2.5em;
+  font-size: 1.5em;
+  background-color: var(--pink);
+  color: white;
+  font-weight: bold;
+  line-height: 1.5em;
+  border-radius: 2rem;
+  text-align: center;
+  padding: 0.5em 0;
+  text-decoration: none;
+}
+
+nav.back a:last-of-type {
+  background-color: var(--yellowgreen);
+  margin-top: 10px;
+}
+
+footer.page {
+  background-image: url(../images/footer-bg.png);
+  box-sizing: border-box;
+  height: 137px;
+  margin-top: 2rem;
+  padding-top: 90px;
+  text-align: center;
+  color: var(--red);
+  font-weight: bold;
 }
