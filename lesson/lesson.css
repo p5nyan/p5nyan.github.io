@@ -172,6 +172,8 @@ h4.caption {
   color: darkslateblue;
   font-size: 1rem;
   margin: 3rem 0 5px;
+  word-break: keep-all;
+  white-space: nowrap;
 }
 
 h3 + h4.caption {

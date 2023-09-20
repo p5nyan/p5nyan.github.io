@@ -28,6 +28,12 @@ header.toppage {
   text-align: center;
 }
 
+header.toppage h1 {
+  line-height: 1.4em;
+  word-break: keep-all;
+  white-space: nowrap;
+}
+
 header.toppage p {
   font-size: 1.3em;
 }
@@ -170,13 +176,38 @@ td {
   border-collapse: collapse;
 }
 
-table {
+table.error,
+table.error :is(th, td) {
+  border: solid 1px var(--pink);
+}
+
+table.warning,
+table.warning :is(th, td) {
+  border: solid 1px khaki;
+}
+
+table,
+table.error,
+table.warning {
   border-width: 3px;
   margin-right: 20px;
 }
 
 th {
+  color: teal;
   background-color: azure;
+  border-bottom-width: 2px;
+}
+
+table.error th {
+  color: var(--red);
+  background-color: bisque;
+  border-bottom-width: 2px;
+}
+
+table.warning th {
+  color: var(--orange);
+  background-color: cornsilk;
   border-bottom-width: 2px;
 }
 
@@ -251,7 +282,7 @@ nav.back a {
 }
 
 nav.back a:last-of-type {
-  background-color: var(--yellowgreen);
+  background-color: var(--pink);
   margin-top: 10px;
 }
 
