@@ -168,29 +168,11 @@ ul li:not(:last-of-type) {
   border-bottom: dotted 2px var(--green);
 }
 
-table,
-th,
-td {
+table#errata,
+table#errata :is(th, td) {
   box-sizing: border-box;
   border: solid 1px var(--green);
   border-collapse: collapse;
-}
-
-table.error,
-table.error :is(th, td) {
-  border: solid 1px var(--pink);
-}
-
-table.warning,
-table.warning :is(th, td) {
-  border: solid 1px khaki;
-}
-
-table,
-table.error,
-table.warning {
-  border-width: 3px;
-  margin-right: 20px;
 }
 
 th {
@@ -199,25 +181,13 @@ th {
   border-bottom-width: 2px;
 }
 
-table.error th {
-  color: var(--red);
-  background-color: bisque;
-  border-bottom-width: 2px;
-}
-
-table.warning th {
-  color: var(--orange);
-  background-color: cornsilk;
-  border-bottom-width: 2px;
-}
-
 td {
   padding: 0.5em;
-  /* width: 40%; */
+  width: 40%;
 }
 
 td.page {
-  width: 10em;
+  width: 20%;
 }
 
 td.page span {
@@ -295,4 +265,40 @@ footer.page {
   text-align: center;
   color: var(--red);
   font-weight: bold;
+}
+
+mark {
+  background: linear-gradient(transparent 50%, var(--marker) 0%);
+}
+
+h2#error + dl dt {
+  font-weight: bold;
+  color: firebrick;
+  margin-bottom: 0.5em;
+  margin-top: 2em;
+}
+
+h2#warning + dl dt {
+  font-weight: bold;
+  color: slateblue;
+  margin-bottom: 0.5em;
+  margin-top: 2em;
+}
+
+dd.msg {
+  margin-bottom: 0.5em;
+}
+
+dd.msg::before {
+  content: '和訳';
+  background-color: var(--yellowgreen);
+  padding: 0.2em 0.5em;
+  border-radius: 0.5em;
+}
+
+dd.why::before {
+  content: '対策';
+  background-color: var(--orange);
+  padding: 0.2em 0.5em;
+  border-radius: 0.5em;
 }

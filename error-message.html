@@ -37,47 +37,39 @@
         警告は、プログラムコードとして正しい（こちらの意図どおり）でも表示されることがあります。その場合は無視して構いません。
       </p>
 
-      <h2>エラー</h2>
+      <h2 id="error">エラー</h2>
 
-      <table class="error">
-        <tr>
-          <th class="page">種別</th>
-          <th>メッセージ</th>
-          <th>意味</th>
-        </tr>
-        <tr>
-          <td class="page"></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </table>
+      <dl>
+        <!--  -->
+        <dt>SyntaxError: await is only valid in async functions and the top level bodies of modules</dt>
+        <dd class="msg">“await”はasyncの付いた関数の中か、モジュールの一番外側でしか有効ではありません。</dd>
+        <dd class="why">
+          awaitが付いた関数（sleepやsayFor）を中で呼び出している関数宣言のasyncをつける必要があります。あるいは、<mark
+            >function draw () {</mark
+          >の先頭のasyncを削除してしまっていないか確認してください。
+        </dd>
+        <!--  -->
+        <!-- 
+          <dt></dt>
+          <dd class="msg"></dd>
+          <dd class="why"></dd>
+        -->
+      </dl>
 
-      <h2>警告</h2>
-      <table class="warning">
-        <tr>
-          <th>メッセージ</th>
-          <th>意味</th>
-        </tr>
-        <tr>
-          <td>'async function' is only available in ES8 (use 'esversion: 8').</td>
-          <td>
-            'async' の付いた関数は ES8
-            というバージョンのJavaScriptでしか使えません。※先頭2行のおまじないを消していないか確認してください。
-          </td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-        </tr>
-      </table>
+      <h2 id="warning">警告</h2>
+
+      <dl>
+        <!--  -->
+        <dt>'async function' is only available in ES8 (use 'esversion: 8').</dt>
+        <dd class="msg">“async”の付いた関数は ES8 というバージョンのJavaScriptでしか使えません。</dd>
+        <dd class="why">&nbsp;先頭2行のおまじないを消していないか確認してください。</dd>
+        <!--  -->
+        <!--
+          <dt></dt>
+          <dd class="msg"></dd>
+          <dd class="why"></dd>
+        -->
+      </dl>
     </main>
 
     <footer class="page">『 はじめての “文字で打ちこむ” プログラミングの本 』 サポートサイト</footer>
