@@ -16,6 +16,11 @@
     </header>
 
     <main>
+      <nav>
+        <a href="#infoAnchor">その他の情報</a>
+        <a href="#errataAnchor">正誤表</a>
+      </nav>
+
       <h2>ピゴニャンのスケッチ</h2>
       <p>p5.jsのウェブエディターが開くので、［ファイル］メニューから「別名で保存」を選択してください。</p>
       <div class="link" style="width: 50%">
@@ -46,54 +51,7 @@
         </template>
       </div>
 
-      <h2>正誤表</h2>
-
-      <p>本の間違いの修正です。</p>
-
-      <table id="errata">
-        <tr>
-          <th class="page">場所</th>
-          <th>誤</th>
-          <th>正</th>
-        </tr>
-        <tr>
-          <td class="page">
-            <span>p.96</span><br />
-            ミニコラム
-          </td>
-          <td>サンプルコードの実行例（コメント）が「➡ -3」など、すべて負の値になっている。</td>
-          <td>「➡ 3」など、すべて正の値が正しい。</td>
-        </tr>
-        <tr>
-          <td class="page">
-            <span>p.247</span><br />
-            図13.4
-          </td>
-          <td colspan="2">
-            関数定義の中の<mark>let nn = n * n;</mark>というコードのイラストで、かけ算の記号が抜けている。
-          </td>
-        </tr>
-        <tr>
-          <td class="page">
-            <span>p.298</span><br />
-            コード40〜41行目
-          </td>
-          <td colspan="2">
-            間違いではないが、ここまでのサンプルコードと条件式のxとyが上下（前後）入れ替わっている。結果は同じ。
-          </td>
-        </tr>
-        <!--
-        <tr>
-          <td class="page">
-            <span></span><br />
-          </td>
-          <td></td>
-          <td></td>
-        </tr>
-        -->
-      </table>
-
-      <h2>その他の情報</h2>
+      <h2 id="infoAnchor">その他の情報</h2>
 
       <section class="h3">
         <h3>この本で最後に作るプログラム</h3>
@@ -180,6 +138,60 @@
           </li>
         </ul>
       </section>
+
+      <h2 id="errataAnchor">正誤表</h2>
+
+      <p>本の間違いの修正です。</p>
+
+      <table id="errata">
+        <tr>
+          <th class="page">場所</th>
+          <th>誤</th>
+          <th>正</th>
+        </tr>
+        <tr>
+          <td class="page">
+            <span>p.96</span><br />
+            ミニコラム
+          </td>
+          <td>サンプルコードの実行例（コメント）が「➡ -3」など、すべて負の値になっている。</td>
+          <td>「➡ 3」など、すべて正の値が正しい。</td>
+        </tr>
+        <tr>
+          <td class="page">
+            <span>p.247</span><br />
+            図13.4の関数定義の中
+          </td>
+          <td>let nn = n n;<br />（イラスト）</td>
+          <td>let nn = n * n;<br />（イラスト）</td>
+        </tr>
+        <tr>
+          <td class="page">
+            <span>p.298</span><br />
+            コード40〜41行目
+          </td>
+          <td colspan="2">
+            間違いではないが、ここまでのサンプルコードと条件式のxとyが上下（前後）入れ替わっている。結果は同じ。
+          </td>
+        </tr>
+        <!--
+        <tr>
+          <td class="page">
+            <span></span><br />
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        -->
+      </table>
+
+      <p>
+        また、本の全体をとおして、Scratchのサンプルコードにはより適切な書き方があります。<br />
+        本の中では、左側のように、2つのブロックのかたまりをいずれも「緑の旗」のイベントブロックではじめていますが、このままでは、どちらのかたまりが先に実行されるかわかりません。下のかたまりの先頭に［1秒待つ］ブロックを付けているので、たいていは上のかたまりの実行が終わってから下のかたまりが動き出すのですが、より適切な書き方はメッセージ機能を使った右側のようになります。
+      </p>
+      <figure id="Scratch-better-code">
+        <img src="./images/Scratch-better-code.png" width="500" />
+      </figure>
     </main>
 
     <footer>

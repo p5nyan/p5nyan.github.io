@@ -115,6 +115,10 @@ section.nouse-p5 p span {
   border-radius: 0 1.25em 1.25em 0;
 }
 
+figure#Scratch-better-code img {
+  max-width: 100%;
+}
+
 figure.demo {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -271,14 +275,14 @@ mark {
   background: linear-gradient(transparent 50%, var(--marker) 0%);
 }
 
-h2#error + dl dt {
+dl#errorList dt {
   font-weight: bold;
   color: firebrick;
   margin-bottom: 0.5em;
   margin-top: 2em;
 }
 
-h2#warning + dl dt {
+dl#warningList dt {
   font-weight: bold;
   color: slateblue;
   margin-bottom: 0.5em;
@@ -293,6 +297,7 @@ dd.msg::before {
   content: '和訳';
   background-color: var(--yellowgreen);
   padding: 0.2em 0.5em;
+  margin-right: 0.5em;
   border-radius: 0.5em;
 }
 
@@ -300,5 +305,6 @@ dd.why::before {
   content: '対策';
   background-color: var(--orange);
   padding: 0.2em 0.5em;
+  margin-right: 0.5em;
   border-radius: 0.5em;
 }

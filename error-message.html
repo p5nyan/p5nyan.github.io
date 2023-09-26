@@ -20,7 +20,8 @@
 
     <main>
       <p>
-        本で紹介しきれなかったエラーメッセージや、p5.jsのウェブエディターのバージョンアップで変更のあったメッセージを掲載しています。
+        本で紹介しきれなかったエラーメッセージや、p5.jsのウェブエディターのバージョンアップで変更のあったメッセージを掲載しています。<br />
+        調べるときはブラウザーの検索機能を使うと便利です。Chrome の場合、ショートカットは Ctrl-F（⌘-F） です。
       </p>
 
       <h2>エラーと警告</h2>
@@ -37,18 +38,74 @@
         警告は、プログラムコードとして正しい（こちらの意図どおり）でも表示されることがあります。その場合は無視して構いません。
       </p>
 
-      <h2 id="error">エラー</h2>
+      <h2>エラー</h2>
 
-      <dl>
+      <p>
+        メッセージの「****」の部分には、みなさんのコードの中にある文言が入ります。「変数」という表現には定数も含みます。
+      </p>
+
+      <dl id="errorList">
         <!--  -->
         <dt>SyntaxError: await is only valid in async functions and the top level bodies of modules</dt>
-        <dd class="msg">“await”はasyncの付いた関数の中か、モジュールの一番外側でしか有効ではありません。</dd>
+        <dd class="msg">構文エラー： awaitはasyncの付いた関数の中か、モジュールの一番外側でしか有効ではありません。</dd>
         <dd class="why">
           awaitが付いた関数（sleepやsayFor）を中で呼び出している関数宣言のasyncをつける必要があります。あるいは、<mark
             >function draw () {</mark
           >の先頭のasyncを削除してしまっていないか確認してください。
         </dd>
         <!--  -->
+        <dt>SyntaxError: Unexpected identifier '****'</dt>
+        <dd class="msg">
+          構文エラー： 予想外の識別子 ****
+          があります。（識別子というのは変数名や関数名のことで、予想外の…というのはつまり「おかしいよ」ということです。）
+        </dd>
+        <dd class="why">
+          変数名や関数名が間違えていないか、名前の途中に空白（スペース）が入っていないか確認してください。if文の
+          <mark>( )</mark> 内の構文が間違っているときにもこのエラーが生じます。
+        </dd>
+        <!--  -->
+        <dt>ReferenceError: **** is not defined</dt>
+        <dd class="msg">参照エラー： **** は定義されていません。</dd>
+        <dd class="why">
+          変数名が間違えていないか確認してください。間違えていない場合は、別のスコープ（<mark>{ }</mark
+          >の範囲）で宣言されている可能性があります（12.2節）。
+        </dd>
+        <!--  -->
+        <dt>SyntaxError: Identifier '****' has already been declared</dt>
+        <dd class="msg">構文エラー： 識別子 **** はすでに宣言されています。</dd>
+        <dd class="why">同じ変数を別の場所で定義していないか確認してください。</dd>
+        <!--  -->
+        <dt>ReferenceError: Cannot access '****' before initialization</dt>
+        <dd class="msg">参照エラー： 初期化する前に **** にアクセスすることはできません。</dd>
+        <dd class="why">
+          同じコードの中で呼び出している関数の名前を使って、変数宣言しようとしていないか確認してください。
+        </dd>
+        <!--  -->
+        <dt>TypeError: **** is not a function</dt>
+        <dd class="msg">型エラー： **** は関数ではありません。</dd>
+        <dd class="why">
+          同じコードの中で宣言されている変数を、関数として呼び出そうとしています。使いたい関数と同じ名前の変数名を宣言してしまっていたら、変数名のほうを置きかえてください。あるいは、変数を関数として使おうとしていないか確認してください。
+        </dd>
+        <!--  -->
+        <dt>SyntaxError: Unexpected reserved word</dt>
+        <dd class="msg">構文エラー： 予想外の予約語があります。（そこに予約語があるのはおかしいよ…ということです）</dd>
+        <dd class="why">予約語（await など）を変数名として使おうとしていないか確認してください。</dd>
+        <!--  -->
+        <dt>SyntaxError: Unexpected token '****'</dt>
+        <dd class="msg">構文エラー： 予想外のトークン **** があります。（ここでのトークンとは文字列のことです）</dd>
+        <dd class="why">予約語（if など）を変数名として使おうとしていないか確認してください。</dd>
+        <!--  -->
+        <dt>SyntaxError: Unexpected end of input</dt>
+        <dd class="msg">構文エラー： 入力の終わりが予想外です。（コードの終わりがおかしい…ということです）</dd>
+        <dd class="why">
+          すべての波カッコ
+          <mark>{ }</mark> がきちんとペアでそろっているか確認してください。また、変数宣言が途中になっている場合（let や
+          const だけ書かれている）にもこのエラーが生じます。
+        </dd>
+        <!--  -->
+        <dt>SyntaxError: Unexpected token ')'</dt>
+        <dd class="msg">予想外のトークン ) があります。</dd>
+        <dd class="why">if文などの <mark>( )</mark> 内の構文が間違っていないか確認してください。</dd>
         <!-- 
           <dt></dt>
           <dd class="msg"></dd>
@@ -56,14 +113,30 @@
         -->
       </dl>
 
-      <h2 id="warning">警告</h2>
+      <h2>警告</h2>
 
-      <dl>
+      <p>
+        メッセージの「****」の部分には、みなさんのコードの中にある文言が入ります。「変数」という表現には定数も含みます。
+      </p>
+
+      <dl id="warningList">
         <!--  -->
         <dt>'async function' is only available in ES8 (use 'esversion: 8').</dt>
         <dd class="msg">“async”の付いた関数は ES8 というバージョンのJavaScriptでしか使えません。</dd>
-        <dd class="why">&nbsp;先頭2行のおまじないを消していないか確認してください。</dd>
+        <dd class="why">先頭2行のおまじないを消していないか確認してください。</dd>
         <!--  -->
+        <dt>Expected a conditional expression and instead saw an assignment.</dt>
+        <dd class="msg">代入ではなく、条件文を記述してください。</dd>
+        <dd class="why">
+          「等しい」を表す比較演算子は <mark>==</mark> あるいは <mark>===</mark> です。等号 =
+          がひとつになっていないか確認してください。
+        </dd>
+        <!--  -->
+        <dt>['****'] is better written in dot notation.</dt>
+        <dd class="msg"><mark>['****']</mark> という部分はドット記法で記述したほうが良いです。</dd>
+        <dd class="why">
+          ブラケット記法は「変数に代入されたプロパティ名」を使って要素にアクセスする場合にのみ使います。（本にしたがって試しに記述してみた場合は、この警告は無視してください）
+        </dd>
         <!--
           <dt></dt>
           <dd class="msg"></dd>
