@@ -16,14 +16,14 @@
     </header>
 
     <main>
-      <nav>
+      <nav class="topNav">
         <a href="#infoAnchor">その他の情報</a>
         <a href="#errataAnchor">正誤表</a>
       </nav>
 
       <h2>ピゴニャンのスケッチ</h2>
       <p>p5.jsのウェブエディターが開くので、［ファイル］メニューから「別名で保存」を選択してください。</p>
-      <div class="link" style="width: 50%">
+      <div class="link sketchLink" style="width: 50%">
         <a href="https://editor.p5js.org/p5nyan/sketches/fHkjcRuKX" target="_blank" rel="noopener">
           ここをクリック！
         </a>
@@ -42,7 +42,7 @@
 
       <h2>練習問題</h2>
       <p>練習問題は、サンプルコードと同じページ（の最後）にあります。以下のリンクボタンからも移動できます。</p>
-      <div class="codeLink" v-scope>
+      <div class="exLink" v-scope>
         <template v-for="n in [...Array(11)].map((_, i) => i + 3)">
           <div class="link">
             <a :href="`./lesson/0${n}.html#ex`" v-if="n < 10">レッスン 0{{n}}</a>
@@ -185,8 +185,9 @@
         -->
       </table>
 
+      <h3>本書のScratchのコードについて</h3>
       <p>
-        また、本の全体をとおして、Scratchのサンプルコードにはより適切な書き方があります。<br />
+        本の全体をとおして、Scratchのサンプルコードにはより適切な書き方があります。<br />
         本の中では、左側のように、2つのブロックのかたまりをいずれも「緑の旗」のイベントブロックではじめていますが、このままでは、どちらのかたまりが先に実行されるかわかりません。下のかたまりの先頭に［1秒待つ］ブロックを付けているので、たいていは上のかたまりの実行が終わってから下のかたまりが動き出すのですが、より適切な書き方はメッセージ機能を使った右側のようになります。
       </p>
       <figure id="Scratch-better-code">
@@ -195,7 +196,7 @@
     </main>
 
     <footer>
-      <small>最終更新：2023年9月18日（著者 尾関基行）</small>
+      <small>最終更新：2023年9月26日（著者 尾関基行）</small>
     </footer>
 
     <script src="https://unpkg.com/petite-vue" defer init></script>

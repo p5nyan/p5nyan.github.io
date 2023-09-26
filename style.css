@@ -59,9 +59,27 @@ h2::after {
   font-size: 0.5em;
 }
 
+h2:first-of-type {
+  margin-top: 2rem;
+}
+
+nav.topNav {
+  text-align: right;
+  margin-top: 1rem;
+}
+
+nav.topNav a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  background-color: var(--pink);
+  padding: 0.5rem 1rem;
+  border-radius: 2em;
+  margin-left: 1rem;
+}
+
 div.link {
   margin: 0.5em 1em;
-  background-color: var(--orange);
   border-radius: 2em;
 }
 
@@ -70,19 +88,32 @@ div.link a {
   text-decoration: none;
   color: black;
   font-weight: bold;
-  padding: 1rem;
+  padding: 1rem 2rem;
   padding-bottom: 0.95rem;
 }
 
-div.codeLink {
-  margin: 0.5rem 1rem;
+div.sketchLink a {
+  text-align: center;
+  color: white;
+}
+
+div.sketchLink {
+  background-color: var(--red);
+}
+
+div.codeLink,
+div.exLink {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem 35px;
 }
 
-div:is(.codeLink, .link) {
-  margin: 0;
+div.codeLink .link {
+  background-color: var(--orange);
+}
+
+div.exLink .link {
+  background-color: var(--yellowgreen);
 }
 
 h3 {
