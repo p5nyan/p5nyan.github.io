@@ -185,7 +185,35 @@
       <h2 id="ex">練習問題</h2>
 
       <p>
-        それでは練習問題に取り組んでみましょう。次のコードを書き写して、<mark
+        次のようなプログラムを作ってみましょう。実行例をまず動かしてみるのがわかりやすいと思います。
+      </p>
+
+      <ul>
+        <li>魚を好きな位置に登場させる</li>
+        <li>2秒に1回、魚が20歩ずつ左に動いて、元の場所に新しい魚が現れる</li>
+        <li>
+          魚の色は、青（skyblue／既定値）→オレンジ（orange）→紫（plum）の順
+        </li>
+        <li>
+          3匹目の魚が登場したあと、ピゴニャンはキャンバスの高さをしゃべり、同時に最後の魚と同じ色になる
+        </li>
+      </ul>
+
+      <figure class="M">
+        <img src="fig/ex04-1.png" width="500" />
+      </figure>
+
+      <a
+        class="example"
+        href="https://editor.p5js.org/p5nyan/full/JWkqqcGcv"
+        target="_blank"
+        rel="noopener"
+        class="p5link"
+        >実行例</a
+      >
+
+      <p>
+        新しい「ピゴニャンのスケッチ」を用意して次のコードと置きかえ、<mark
           >/* */</mark
         >
         でコメントアウトされた部分の指示どおりにコードを編集してください。
@@ -196,25 +224,9 @@
         data-gist-hide-footer="true"
       ></code>
 
-      <p class="question">
-        このコードを実行すると、色違いの3匹の魚が順番に描画され、ピゴニャンのほうに近づいてきます。最後にピゴニャンがキャンバスの高さをしゃべって、最後に登場した魚と同じ色に変わります。<br />
-        実行例はこちら →
-        <a
-          href="https://editor.p5js.org/p5nyan/full/JWkqqcGcv"
-          target="_blank"
-          rel="noopener"
-          class="p5link"
-          >p5.js</a
-        >
-      </p>
-
-      <figure class="M">
-        <img src="fig/ex04-1.png" width="500" />
-      </figure>
-
       <p>ヒントは次のとおり</p>
       <ol>
-        <li>&nbsp;宣言した変数はコードの中で何度でも使えます。</li>
+        <li>宣言した変数はコードの中で何度でも使えます。</li>
         <li>
           変数の宣言は 「<mark>let 変数名 = 初期値;</mark>」、変数への代入は
           「<mark>変数名 = 値;</mark>」でした。
