@@ -114,11 +114,6 @@ ul li a {
   color: darkslateblue;
 }
 
-ul li {
-  text-indent: -1.3em;
-  padding-left: 1.3em;
-}
-
 ul li::marker {
   color: var(--green);
 }
