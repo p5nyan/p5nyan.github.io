@@ -248,12 +248,6 @@ ol {
   margin-right: 2em;
   margin-left: 1em;
   padding-left: 1em;
-  counter-reset: item;
-}
-
-ol li {
-  text-indent: -1.3em;
-  padding-left: 1.3em;
 }
 
 ol li::marker {
