@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 let p5nyan; // start関数から始めるとき用
 
@@ -13,12 +13,12 @@ p5.prototype.start = (x = width / 2, y = height / 2, param = {}) => {
 /** ピゴニャン用のp5.jsのセットアップ */
 p5.prototype.setupSprite = (x = width / 2, y = height / 2, margin_y = 0, margin_x = 0) => {
   // キャンバスの設定
-  document.querySelector("canvas").style.border = "solid 1px gray";
+  document.querySelector('canvas').style.border = 'solid 1px gray';
   if (margin_x) {
-    document.querySelector("canvas").style.marginTop = margin_x + "px";
+    document.querySelector('canvas').style.marginTop = margin_x + 'px';
   }
   if (margin_y) {
-    document.querySelector("canvas").style.marginTop = margin_y + "px";
+    document.querySelector('canvas').style.marginTop = margin_y + 'px';
   }
   // document.addEventListener("contextmenu", (e) => e.preventDefault());
 
@@ -35,7 +35,7 @@ class Sprite {
     this.x = x;
     this.y = Sprite.withBody ? y - 14 : y;
     this.dir = param.dir || { x: 1, y: 0 };
-    this.col = param.col || "coral";
+    this.col = param.col || 'coral';
     this.dcol = this.getDarkColor(this.col);
     this.pcol = this.getPaleColor(this.col);
     this.state = false;
@@ -149,7 +149,7 @@ class Sprite {
       fill(this.dcol);
       ellipse(x + 4 * d, y + 20, 18, 6);
       noStroke();
-      fill("gold");
+      fill('gold');
       circle(x + 10 * d, y + 23, 5);
     }
     // 手前脚が後
@@ -158,7 +158,7 @@ class Sprite {
       fill(this.dcol);
       ellipse(x + 6 * d, y + 20, 14, 5);
       noStroke();
-      fill("gold");
+      fill('gold');
       circle(x + 12 * d, y + 23, 5);
       // front arm
       strokeWeight(5);
@@ -194,7 +194,7 @@ class Sprite {
     line(x + 31 * d, y + 3, x + 30 * d, y + 3);
     // mouth
     if (this.msg != undefined) {
-      fill("crimson");
+      fill('crimson');
       noStroke();
       ellipse(x + 14 * d, y + 14, 4, 5);
     }
@@ -233,7 +233,7 @@ class Sprite {
       fill(this.dcol);
       ellipse(x, y + 20, 20, 7);
       noStroke();
-      fill("gold");
+      fill('gold');
       circle(x, y + 23, 5);
     }
     // 上向き
@@ -307,7 +307,7 @@ class Sprite {
         line(x + 24, y + 3, x + 30, y + 3);
         // mouth
         if (this.msg != undefined) {
-          fill("crimson");
+          fill('crimson');
           noStroke();
           ellipse(x, y + 15, 4, 5);
         }
@@ -332,7 +332,7 @@ class Sprite {
       line(x + 22, y + 13 * d, x + 28, y + 13 * d);
       // mouth
       if (this.msg != undefined) {
-        fill("crimson");
+        fill('crimson');
         noStroke();
         ellipse(x, y + 20 * d, 4, 4);
       }
@@ -354,29 +354,29 @@ class Sprite {
   /** 〜に向ける */
   turn(dir) {
     switch (dir) {
-      case "上":
+      case '上':
       case 0:
         this.dir.x = 0;
         this.dir.y = -1;
         break;
-      case "下":
+      case '下':
       case 180:
         this.dir.x = 0;
         this.dir.y = 1;
         break;
-      case "右":
+      case '右':
       case 90:
         this.dir.x = 1;
         this.dir.y = 0;
         break;
-      case "左":
+      case '左':
       case -90:
       case 270:
         this.dir.x = -1;
         this.dir.y = 0;
         break;
       default:
-        console.error("方向は 上/下/左/右 か 0/90/180/270 で指定してください");
+        console.error('方向は 上/下/左/右 か 0/90/180/270 で指定してください');
         noLoop();
         break;
     }
@@ -401,22 +401,22 @@ class Sprite {
   /** 方法を取得 */
   getDirection() {
     if (this.dir.x == 1) {
-      return "右";
+      return '右';
     }
     if (this.dir.x == -1) {
-      return "左";
+      return '左';
     }
     if (this.dir.y == 1) {
-      return "下";
+      return '下';
     }
     if (this.dir.y == -1) {
-      return "上";
+      return '上';
     }
   }
 
   /** セリフを設定 */
   say(msg = undefined) {
-    if (msg === "") {
+    if (msg === '') {
       this.msg = undefined;
     } else {
       this.msg = msg;
@@ -439,8 +439,8 @@ class Sprite {
   }
 
   /** 色を変える */
-  changeColor(col = "coral") {
-    if (col === "random") {
+  changeColor(col = 'coral') {
+    if (col === 'random') {
       col = this.randomColor(this.col);
     }
     this.col = col;
@@ -456,7 +456,7 @@ class Sprite {
 
   /** ツール（ランダムに色を選ぶ） */
   randomColor(cur_col) {
-    const list = ["coral", "silver", "skyblue", "gold", "lightgreen", "plum", "lightpink"];
+    const list = ['coral', 'silver', 'skyblue', 'gold', 'lightgreen', 'plum', 'lightpink'];
     let col;
     do {
       col = random(list);
@@ -493,13 +493,17 @@ class Sprite {
     // 移動時に方向転換する（通常）
     if (withTurn) {
       const keepState = this.x == x && this.y == y;
-      if (this.keepH || abs(this.x - x) >= abs(this.y - y)) {
-        this.dir.x = x >= this.x ? 1 : -1;
+      if (this.keepH || abs(this.x - x) > abs(this.y - y)) {
+        if (x != this.x) {
+          this.dir.x = x > this.x ? 1 : -1;
+        } // else x方向変更なし
         this.dir.y = 0;
-      } else {
-        this.dir.y = y >= this.y ? 1 : -1;
+      } else if (abs(this.x - x) < abs(this.y - y)) {
+        if (y != this.y) {
+          this.dir.y = y > this.y ? 1 : -1;
+        } // else y方向変更なし
         this.dir.x = 0;
-      }
+      } // else xy方向変更なし
       this.x = x;
       this.y = y;
       if (Sprite.flushScreen) {
@@ -528,7 +532,9 @@ class Sprite {
     if (withTurn) {
       const keepState = this.x == x;
       if (this.dir.y) this.dir.y = 0;
-      this.dir.x = x >= this.x ? 1 : -1;
+      if (x != this.x) {
+        this.dir.x = x > this.x ? 1 : -1;
+      } // else x方向変更なし
       this.x = x;
       if (Sprite.flushScreen) {
         return this.draw(keepState);
@@ -555,7 +561,9 @@ class Sprite {
     if (withTurn) {
       const keepState = this.y == y;
       if (this.dir.x) this.dir.x = 0;
-      this.dir.y = y >= this.y ? 1 : -1;
+      if (y != this.y) {
+        this.dir.y = y > this.y ? 1 : -1;
+      } // else y方向変更なし
       this.y = y;
       if (Sprite.flushScreen) {
         return this.draw(keepState);
@@ -585,9 +593,9 @@ class Sprite {
   /* 以下、魚の描画  */
 
   /** 魚をリストに追加して描画する */
-  putFish(x, y, col = "skyblue") {
+  putFish(x, y, col = 'skyblue') {
     if (!isFinite(x) || !isFinite(y)) return;
-    if (col === "random") {
+    if (col === 'random') {
       col = this.randomColor(this.col);
     }
     let sameFish = undefined;
@@ -690,7 +698,7 @@ p5.prototype.sayFor = async (msg, sec) => {
     p5nyan.say(msg);
     p5nyan.draw(true);
     await sleep(sec);
-    p5nyan.say("");
+    p5nyan.say('');
   }
 };
 
