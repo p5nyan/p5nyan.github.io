@@ -275,7 +275,61 @@
 
       <h3>基本問題</h3>
 
-      <p class="notyet">準備中</p>
+      <p>
+        ランダムな位置（x座標）に現れた魚がピゴニャンの右側か左側か、ピゴニャンにしゃべらせるプログラムを作りましょう。
+      </p>
+
+      <ul>
+        <li>ピゴニャンをキャンバスの左右中央、y座標250の位置に登場させる。</li>
+        <li>魚はキャンバスのx方向にランダムな位置に現れる（y方向は100で固定）。</li>
+        <li>魚がピゴニャンの右側にいたら「右」、左側にいたら「左」とピゴニャンにしゃべらせる。</li>
+      </ul>
+
+      <figure class="M">
+        <img src="fig/ex06-1.png" />
+      </figure>
+
+      <a
+        class="example"
+        href="https://editor.p5js.org/p5nyan/full/xzOwo3Utz"
+        target="_blank"
+        rel="noopener"
+        class="p5link"
+        >実行例</a
+      >
+
+      <p>
+        新しい「ピゴニャンのスケッチ」を用意して次のコードと置きかえ、<mark>/* */</mark>
+        でコメントアウトされた部分の指示どおりにコードを編集してください。1問目はレッスン5の復習です。
+      </p>
+
+      <code data-gist-id="963c541e5a9f0922c5847cbd9fe8f69d" data-gist-hide-footer="true"></code>
+
+      <p>
+        ある2点が左右のどちらにあるか…という条件式はいろいろな書き方ができます。例えば、x座標AとBがあるとき、<mark
+          >A &gt; B</mark
+        >
+        ならAはBより右側（x座標が大きいほう）にあります。これは
+        <mark>A - B &gt; 0</mark> と書いても同じです。
+      </p>
+      <p>
+        ちなみに、AがBよりも「10以上右側にある」という条件式は
+        <mark>A - B &gt; 10</mark> と書けます。同じく左側にある…は（Bのほうが大きくなるので）<mark>B - A &gt; 10</mark>
+        ですが、<mark>A - B &lt; -10</mark>
+        とも書けますね。図を描いて確認してみましょう。（なお、この考え方を次の発展問題で使います）
+      </p>
+      <p>
+        すぐにできてしまった…という人は、問2の条件分岐を三項演算子で書き直してみてください。どこに三項演算子を入れるか…がポイントです。
+      </p>
+
+      <details>
+        <summary>解答例（クリックしてね）</summary>
+        <code data-gist-id="56c5cdc4b541abceaa5664f5559bf64e" data-gist-hide-footer="true"></code>
+      </details>
+      <details>
+        <summary>三項演算子で書いた場合</summary>
+        <code class="one-code"> say(fx - getX() > 0 ? "右" : "左"); </code>
+      </details>
 
       <h3>発展問題</h3>
 

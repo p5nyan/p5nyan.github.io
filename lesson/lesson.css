@@ -268,6 +268,13 @@ summary {
   color: teal;
 }
 
+code.one-code {
+  background-color: #fff1df;
+  font-size: 0.8em;
+  padding: 0.5em 1em;
+  margin: 1em 0;
+}
+
 footer {
   background-image: url(../images/footer-bg.png);
   box-sizing: border-box;
