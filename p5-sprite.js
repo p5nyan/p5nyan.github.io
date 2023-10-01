@@ -11,7 +11,12 @@ p5.prototype.start = (x = width / 2, y = height / 2, param = {}) => {
 };
 
 /** ピゴニャン用のp5.jsのセットアップ */
-p5.prototype.setupSprite = (x = width / 2, y = height / 2, margin_y = 0, margin_x = 0) => {
+p5.prototype.setupSprite = (
+  x = width / 2,
+  y = height / 2,
+  margin_y = 0,
+  margin_x = 0
+) => {
   // キャンバスの設定
   document.querySelector('canvas').style.border = 'solid 1px gray';
   if (margin_x) {
@@ -456,7 +461,15 @@ class Sprite {
 
   /** ツール（ランダムに色を選ぶ） */
   randomColor(cur_col) {
-    const list = ['coral', 'silver', 'skyblue', 'gold', 'lightgreen', 'plum', 'lightpink'];
+    const list = [
+      'coral',
+      'silver',
+      'skyblue',
+      'gold',
+      'lightgreen',
+      'plum',
+      'lightpink',
+    ];
     let col;
     do {
       col = random(list);
@@ -612,10 +625,20 @@ class Sprite {
     }
     if (sameFish === undefined) {
       // 新しい魚はリストに追加
-      this.fishList.push({ x: x, y: y, col: col, tailCol: this.getDarkColor(col) });
+      this.fishList.push({
+        x: x,
+        y: y,
+        col: col,
+        tailCol: this.getDarkColor(col),
+      });
     } else {
       // 色違いは置きかえ
-      this.fishList.splice(sameFish, 1, { x: x, y: y, col: col, tailCol: this.getDarkColor(col) });
+      this.fishList.splice(sameFish, 1, {
+        x: x,
+        y: y,
+        col: col,
+        tailCol: this.getDarkColor(col),
+      });
     }
     return this.draw(true);
   }
@@ -645,7 +668,7 @@ class Sprite {
     if (!this.fishList) return;
     for (let i = 0; i < this.fishList.length; i += 1) {
       this.fishList[i].x -= step;
-      if (this.fishList[i].x < -11) this.fishList[i].x = 495;
+      if (this.fishList[i].x < -11) this.fishList[i].x = width + 15;
     }
     return this.draw(true);
   }
