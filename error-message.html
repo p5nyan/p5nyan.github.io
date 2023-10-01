@@ -3,11 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>『はじめての“文字で打ちこむ”プログラミングの本』 サポートサイト</title>
+    <title>
+      『はじめての“文字で打ちこむ”プログラミングの本』 サポートサイト
+    </title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header class="page">
@@ -21,7 +26,8 @@
     <main>
       <p>
         本で紹介しきれなかったエラーメッセージや、p5.jsのウェブエディターのバージョンアップで変更のあったメッセージを掲載しています。<br />
-        調べるときはブラウザーの検索機能を使うと便利です。Chrome の場合、ショートカットは Ctrl-F（⌘-F） です。
+        調べるときはブラウザーの検索機能を使うと便利です。Chrome
+        の場合、ショートカットは Ctrl-F（⌘-F） です。
       </p>
 
       <h2>エラーと警告</h2>
@@ -32,7 +38,7 @@
         エラーは、本でも説明したとおり、コードエディターの行番号に赤色の背景が付き、エラーの原因になっていそうなコードにも赤色の波線がつきます（ただし、必ずしも波線部分が原因とは限りません）。プログラムを実行すると強制停止し、コンソールにメッセージが表示されます。
       </p>
       <p>
-        一方、警告のほうは、コードエディターの表示がうすい黄色なのであまり目立ちません。そして、プログラムを実行してもコンソールには（通常）メッセージは表示されません。では、どこで警告の内容（メッセージ）を知ることができるかというと、コードエディターの黄色くなった行番号にマウスポインターを重ねると表示されます。
+        一方、警告のほうは、コードエディターの表示がうすい黄色なのであまり目立ちません。そして、プログラムを実行してもコンソールにはメッセージは表示されないことがあります。では、どこで警告の内容を知ることができるかというと、コードエディターの黄色くなった行番号にマウスポインターを重ねると表示されます。（一方、コンソールにだけ表示される警告もあります）
       </p>
       <p>
         警告は、プログラムコードとして正しい（こちらの意図どおり）でも表示されることがあります。その場合は無視して構いません。
@@ -46,8 +52,14 @@
 
       <dl id="errorList">
         <!--  -->
-        <dt>SyntaxError: await is only valid in async functions and the top level bodies of modules</dt>
-        <dd class="msg">構文エラー： awaitはasyncの付いた関数の中か、モジュールの一番外側でしか有効ではありません。</dd>
+        <dt>
+          SyntaxError: await is only valid in async functions and the top level
+          bodies of modules
+        </dt>
+        <dd class="msg">
+          構文エラー：
+          awaitはasyncの付いた関数の中か、モジュールの一番外側でしか有効ではありません。
+        </dd>
         <dd class="why">
           awaitが付いた関数（sleepやsayFor）を中で呼び出している関数宣言のasyncをつける必要があります。あるいは、<mark
             >function draw () {</mark
@@ -67,16 +79,21 @@
         <dt>ReferenceError: **** is not defined</dt>
         <dd class="msg">参照エラー： **** は定義されていません。</dd>
         <dd class="why">
-          変数名が間違えていないか確認してください。間違えていない場合は、別のスコープ（<mark>{ }</mark
+          変数名が間違えていないか確認してください。間違えていない場合は、別のスコープ（<mark
+            >{ }</mark
           >の範囲）で宣言されている可能性があります（12.2節）。
         </dd>
         <!--  -->
         <dt>SyntaxError: Identifier '****' has already been declared</dt>
         <dd class="msg">構文エラー： 識別子 **** はすでに宣言されています。</dd>
-        <dd class="why">同じ変数を別の場所で定義していないか確認してください。</dd>
+        <dd class="why">
+          同じ変数を別の場所で定義していないか確認してください。
+        </dd>
         <!--  -->
         <dt>ReferenceError: Cannot access '****' before initialization</dt>
-        <dd class="msg">参照エラー： 初期化する前に **** にアクセスすることはできません。</dd>
+        <dd class="msg">
+          参照エラー： 初期化する前に **** にアクセスすることはできません。
+        </dd>
         <dd class="why">
           同じコードの中で呼び出している関数の名前を使って、変数宣言しようとしていないか確認してください。
         </dd>
@@ -88,24 +105,42 @@
         </dd>
         <!--  -->
         <dt>SyntaxError: Unexpected reserved word</dt>
-        <dd class="msg">構文エラー： 予想外の予約語があります。（そこに予約語があるのはおかしいよ…ということです）</dd>
-        <dd class="why">予約語（await など）を変数名として使おうとしていないか確認してください。</dd>
+        <dd class="msg">
+          構文エラー：
+          予想外の予約語があります。（そこに予約語があるのはおかしいよ…ということです）
+        </dd>
+        <dd class="why">
+          予約語（await
+          など）を変数名として使おうとしていないか確認してください。
+        </dd>
         <!--  -->
         <dt>SyntaxError: Unexpected token '****'</dt>
-        <dd class="msg">構文エラー： 予想外のトークン **** があります。（ここでのトークンとは文字列のことです）</dd>
-        <dd class="why">予約語（if など）を変数名として使おうとしていないか確認してください。</dd>
+        <dd class="msg">
+          構文エラー： 予想外のトークン ****
+          があります。（ここでのトークンとは文字列のことです）
+        </dd>
+        <dd class="why">
+          予約語（if など）を変数名として使おうとしていないか確認してください。
+        </dd>
         <!--  -->
         <dt>SyntaxError: Unexpected end of input</dt>
-        <dd class="msg">構文エラー： 入力の終わりが予想外です。（コードの終わりがおかしい…ということです）</dd>
+        <dd class="msg">
+          構文エラー：
+          入力の終わりが予想外です。（コードの終わりがおかしい…ということです）
+        </dd>
         <dd class="why">
           すべての波カッコ
-          <mark>{ }</mark> がきちんとペアでそろっているか確認してください。また、変数宣言が途中になっている場合（let や
-          const だけ書かれている）にもこのエラーが生じます。
+          <mark>{ }</mark>
+          がきちんとペアでそろっているか確認してください。また、変数宣言が途中になっている場合（let
+          や const だけ書かれている）にもこのエラーが生じます。
         </dd>
         <!--  -->
         <dt>SyntaxError: Unexpected token ')'</dt>
         <dd class="msg">予想外のトークン ) があります。</dd>
-        <dd class="why">if文などの <mark>( )</mark> 内の構文が間違っていないか確認してください。</dd>
+        <dd class="why">
+          if文などの
+          <mark>( )</mark> 内の構文が間違っていないか確認してください。
+        </dd>
         <!-- 
           <dt></dt>
           <dd class="msg"></dd>
@@ -122,20 +157,42 @@
       <dl id="warningList">
         <!--  -->
         <dt>'async function' is only available in ES8 (use 'esversion: 8').</dt>
-        <dd class="msg">“async”の付いた関数は ES8 というバージョンのJavaScriptでしか使えません。</dd>
-        <dd class="why">先頭2行のおまじないを消していないか確認してください。</dd>
+        <dd class="msg">
+          “async”の付いた関数は ES8
+          というバージョンのJavaScriptでしか使えません。
+        </dd>
+        <dd class="why">
+          先頭2行のおまじないを消していないか確認してください。
+        </dd>
         <!--  -->
-        <dt>Expected a conditional expression and instead saw an assignment.</dt>
+        <dt>
+          Expected a conditional expression and instead saw an assignment.
+        </dt>
         <dd class="msg">代入ではなく、条件文を記述してください。</dd>
         <dd class="why">
-          「等しい」を表す比較演算子は <mark>==</mark> あるいは <mark>===</mark> です。等号 =
+          「等しい」を表す比較演算子は <mark>==</mark> あるいは
+          <mark>===</mark> です。等号 =
           がひとつになっていないか確認してください。
         </dd>
         <!--  -->
         <dt>['****'] is better written in dot notation.</dt>
-        <dd class="msg"><mark>['****']</mark> という部分はドット記法で記述したほうが良いです。</dd>
+        <dd class="msg">
+          <mark>['****']</mark> という部分はドット記法で記述したほうが良いです。
+        </dd>
         <dd class="why">
           ブラケット記法は「変数に代入されたプロパティ名」を使って要素にアクセスする場合にのみ使います。（本にしたがって試しに記述してみた場合は、この警告は無視してください）
+        </dd>
+        <dt>
+          p5.js says: you have used a p5.js reserved function "****" make sure
+          you change the function name to something
+          else.（実行時にコンソールに表示）
+        </dt>
+        <dd class="msg">
+          あなたはp5.jsが予約している ****
+          という関数名を他の何かに変えようとしています。
+        </dd>
+        <dd class="why">
+          本では解説していませんが、p5.jsのライブラリーで定義されている関数名を、自分のコードの変数名や関数名に使おうとしたときに表示される警告です。別の変数名／関数名を選んでください。
         </dd>
         <!--
           <dt></dt>
@@ -145,6 +202,8 @@
       </dl>
     </main>
 
-    <footer class="page">『 はじめての “文字で打ちこむ” プログラミングの本 』 サポートサイト</footer>
+    <footer class="page">
+      『 はじめての “文字で打ちこむ” プログラミングの本 』 サポートサイト
+    </footer>
   </body>
 </html>
