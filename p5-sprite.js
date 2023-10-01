@@ -702,6 +702,11 @@ class Sprite {
       return false;
     }
   }
+
+  /**  魚の残り数を取得する */
+  getFishNum() {
+    return !this.fishList ? 0 : this.fishList.length;
+  }
 }
 
 /** startメソッドで生成したピゴニャンのメソッドを直接呼び出す */
@@ -789,6 +794,10 @@ p5.prototype.putFish = (x, y, col) => {
 
 p5.prototype.moveFish = (step) => {
   return p5nyan.moveFish(step);
+};
+
+p5.prototype.getFishNum = () => {
+  return p5nyan.getFishNum();
 };
 
 /*
