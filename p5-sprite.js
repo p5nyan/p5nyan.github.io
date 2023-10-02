@@ -686,15 +686,15 @@ class Sprite {
       if (Sprite.withBody) {
         if (fx < x + 45 && fx > x - 52 && fy < y + 36 && fy > y - 44) {
           eaten = fish;
-          return false;
+          return false; // リストから削除
         }
       } else {
         if (fx < x + 45 && fx > x - 52 && fy < y + 30 && fy > y - 30) {
           eaten = fish;
-          return false;
+          return false; // リストから削除
         }
       }
-      return true;
+      return true; // リストに残す
     });
     if (eaten) {
       return { x: eaten.x, y: eaten.y, col: eaten.col };
