@@ -44,6 +44,20 @@ header p {
   font-weight: bold;
 }
 
+div.sketchLink a {
+  text-align: center;
+  color: white;
+  display: block;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+div.sketchLink {
+  margin-top: 2rem;
+  border-radius: 2em;
+  background-color: var(--red);
+}
+
 nav.back {
   position: fixed;
   right: 20px;
@@ -73,7 +87,7 @@ nav.back a:last-of-type {
 }
 
 nav.codeNav {
-  margin: 3rem 0 0;
+  margin: 2rem 0 0;
 }
 
 nav.codeNav label {
