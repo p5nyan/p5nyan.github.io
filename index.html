@@ -153,7 +153,7 @@
           <td class="page">
             <span>p.37、39</span><br />
           </td>
-          <td>ウェブエディターが更新され、ぴごにゃんのおまじないのうち「/* jshint esversion: 8 */」は不要となった。</td>
+          <td colspan="2">ウェブエディターが更新され、ぴごにゃんのおまじないのうち「/* jshint esversion: 8 */」は不要となった。</td>
         </tr>
         <tr>
           <td class="page">
@@ -209,19 +209,27 @@
 
       <h3>p5.jsのバージョン2への対応について</h3>
 
-      <p>p5.jsのバージョンは、大きく 1 系統と 2 系統に分かれています。本書はバージョン1を想定して書かれており、バージョン2では動作やふるまいが異なる部分があります。</p>
+      <p>p5.jsのバージョンは、大きく 1 系統と 2 系統に分かれています。<br>
+        本書はバージョン1を想定して書かれており、バージョン2では動作やふるまいが異なる部分があります。</p>
 
       <table id="errata">
         <tr>
           <th class="page">場所</th>
-          <th>備考</th>
+          <th>変更点</th>
+        </tr>
+        <tr>
+          <td class="page">
+            <span>p.69</span><br />
+            図4.8（とそれ以降）
+          </td>
+          <td>p5.jsのバージョン2の内部で「step」という関数が使われており、警告（けいこく）が出る。無視してよい。</td>
         </tr>
         <tr>
           <td class="page">
             <span>p.136</span><br />
             右段の上から6行目〜
           </td>
-          <td>バージョン2からは、keyIsPressedは最後のキーの値を保持せず、キーを離すと自動的に空文字 "" になるため、if (keyIsPressed == true) の条件ブロックは不要になる。</td>
+          <td>バージョン2からは keyIsPressed は最後に押されたキーの値を保持せず、キーを離すと自動的に空文字 "" になるため、if (keyIsPressed == true) の条件ブロックは不要。</td>
         </tr>
         <!--
         <tr>
@@ -244,7 +252,7 @@
     </main>
 
     <footer>
-      <small>最終更新：2026年3月12日（著者 尾関基行）</small>
+      <small>最終更新：2026年3月13日（著者 尾関基行）</small>
     </footer>
 
     <script src="https://unpkg.com/petite-vue" defer init></script>
