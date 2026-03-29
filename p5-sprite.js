@@ -684,12 +684,12 @@ class Sprite {
       const fx = fish.x;
       const fy = fish.y;
       if (Sprite.withBody) {
-        if (fx < x + 45 && fx > x - 52 && fy < y + 36 && fy > y - 44) {
+        if (fx < x + 40 && fx > x - 47 && fy < y + 36 && fy > y - 44) {
           eaten = fish;
           return false; // リストから削除
         }
       } else {
-        if (fx < x + 45 && fx > x - 52 && fy < y + 30 && fy > y - 30) {
+        if (fx < x + 40 && fx > x - 47 && fy < y + 30 && fy > y - 30) {
           eaten = fish;
           return false; // リストから削除
         }
