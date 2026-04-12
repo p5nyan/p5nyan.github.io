@@ -116,18 +116,21 @@
         </dd>
         <!--  -->
         <dt>SyntaxError: Unexpected token ')'</dt>
-        <dd class="msg">予想外のトークン ) があります。</dd>
+        <dd class="msg">構文エラー：予想外のトークン ) があります。</dd>
         <dd class="why">
           if文などの
           <mark>( )</mark> 内の構文が間違っていないか確認してください。
         </dd>
+        <dt>Error: Infinite loop detected at line ****. Stopping execution.</dt>
+        <dd class="msg">エラー：無限ループが **** 行目で見つかりました。実行を停止します。</dd>
+        <dd class="why">おまじない「//noprotect」がコード内に書かれて状態で繰り返し構文（while や for）を使おうとすると表示されます。</dd>
         <!-- 
           <dt></dt>
           <dd class="msg"></dd>
           <dd class="why"></dd>
         -->
       </dl>
-
+    
       <h2>警告</h2>
 
       <p>
