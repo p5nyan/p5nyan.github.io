@@ -121,6 +121,7 @@
           if文などの
           <mark>( )</mark> 内の構文が間違っていないか確認してください。
         </dd>
+        <!--  -->
         <dt>Error: Infinite loop detected at line ****. Stopping execution.</dt>
         <dd class="msg">エラー：無限ループが **** 行目で見つかりました。実行を停止します。</dd>
         <dd class="why">おまじない「//noprotect」がコード内に書かれて状態で繰り返し構文（while や for）を使おうとすると表示されます。</dd>
@@ -142,6 +143,10 @@
         <dt>'async function' is only available in ES8 (use 'esversion: 8').</dt>
         <dd class="msg">“async”の付いた関数は ES8 というバージョンのJavaScriptでしか使えません。</dd>
         <dd class="why">先頭2行のおまじないを消していないか確認してください。</dd>
+        <!--  -->
+        <dt>Function "step" on line **** is being redeclared and conflicts with a p5.js function.</dt>
+        <dd class="msg">**** 行目にある関数 “step” が再宣言されており、p5.js の関数と衝突（コンフリクト）しています。</dd>
+        <dd class="why">p5.jsのバージョン2から「step」という名前の関数が p5.js の関数として定義されてしまいました。変数名を「steps」等に変更してください。</dd>
         <!--  -->
         <dt>Expected a conditional expression and instead saw an assignment.</dt>
         <dd class="msg">代入ではなく、条件文を記述してください。</dd>
