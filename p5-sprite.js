@@ -744,7 +744,7 @@ p5.prototype.turnBack = () => {
 };
 
 p5.prototype.getDirection = () => {
-  p5nyan.getDirection();
+  return p5nyan.getDirection();
 };
 
 p5.prototype.changeColor = (col) => {
