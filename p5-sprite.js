@@ -15,7 +15,7 @@ p5.prototype.setupSprite = (
   x = width / 2,
   y = height / 2,
   margin_y = 0,
-  margin_x = 0
+  margin_x = 0,
 ) => {
   // キャンバスの設定
   document.querySelector('canvas').style.border = 'solid 1px gray';
@@ -52,7 +52,14 @@ class Sprite {
 
   /** 描画（ピゴニャンと魚） */
   draw(keepState = false, noSpeak = false) {
-    if (Sprite.flushScreen) background(255);
+    if (Sprite.flushScreen) {
+      background(255);
+      if (typeof drawBackground === 'function') {
+        push();
+        drawBackground();
+        pop();
+      }
+    }
 
     // 魚
     let eaten = this.eatFish();
