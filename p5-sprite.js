@@ -47,6 +47,7 @@ class Sprite {
     this.keepH = false;
     this.fishList = [];
     this.msg = undefined;
+    this.textSize = textSize();
     this.draw();
   }
 
@@ -439,6 +440,7 @@ class Sprite {
   /** しゃべる（描画） */
   drawMessage() {
     push();
+    textSize(this.textSize);
     textAlign(CENTER, CENTER);
     fill(0);
     noStroke();
