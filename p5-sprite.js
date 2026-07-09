@@ -11,12 +11,7 @@ p5.prototype.start = (x = width / 2, y = height / 2, param = {}) => {
 };
 
 /** ピゴニャン用のp5.jsのセットアップ */
-p5.prototype.setupSprite = (
-  x = width / 2,
-  y = height / 2,
-  margin_y = 0,
-  margin_x = 0,
-) => {
+p5.prototype.setupSprite = (x = width / 2, y = height / 2, margin_y = 0, margin_x = 0) => {
   // キャンバスの設定
   document.querySelector('canvas').style.border = 'solid 1px gray';
   if (margin_x) {
@@ -470,15 +465,7 @@ class Sprite {
 
   /** ツール（ランダムに色を選ぶ） */
   randomColor(cur_col) {
-    const list = [
-      'coral',
-      'silver',
-      'skyblue',
-      'gold',
-      'lightgreen',
-      'plum',
-      'lightpink',
-    ];
+    const list = ['coral', 'silver', 'skyblue', 'gold', 'lightgreen', 'plum', 'lightpink'];
     let col;
     do {
       col = random(list);
@@ -638,7 +625,7 @@ class Sprite {
         x: x,
         y: y,
         col: col,
-        tailCol: this.getDarkColor(col),
+        tailCol: this.getDarkColor(col)
       });
     } else {
       // 色違いは置きかえ
@@ -646,7 +633,7 @@ class Sprite {
         x: x,
         y: y,
         col: col,
-        tailCol: this.getDarkColor(col),
+        tailCol: this.getDarkColor(col)
       });
     }
     return this.draw(true);
@@ -676,7 +663,7 @@ class Sprite {
   moveFish(step = 10) {
     if (!this.fishList) return;
     for (let i = 0; i < this.fishList.length; i += 1) {
-      this.fishList[i].x -= step;
+      this.fishList[i].x -= abs(step);
       if (this.fishList[i].x < -11) this.fishList[i].x = width + 15;
     }
     return this.draw(true);
@@ -715,6 +702,30 @@ class Sprite {
   /**  魚の残り数を取得する */
   getFishNum() {
     return !this.fishList ? 0 : this.fishList.length;
+  }
+
+  /**  魚の配列をリセットする */
+  resetFish() {
+    this.fishList = [];
+    this.draw(true);
+  }
+
+  /**  特定の座標にいる魚を削除する */
+  removeFish(x, y) {
+    this.fishList = this.fishList.filter((f) => !(f.x == x && f.y == y));
+    this.draw(true);
+  }
+
+  /**  特定の順番にいる魚を削除する */
+  removeFishByIndex(idx) {
+    this.fishList.splice(idx, 1);
+    this.draw(true);
+  }
+
+  /**  特定の色の魚を削除する */
+  removeFishByColor(col) {
+    this.fishList = this.fishList.filter((f) => f.col != col);
+    this.draw(true);
   }
 }
 
@@ -807,6 +818,22 @@ p5.prototype.moveFish = (step) => {
 
 p5.prototype.getFishNum = () => {
   return p5nyan.getFishNum();
+};
+
+p5.prototype.resetFish = () => {
+  return p5nyan.resetFish();
+};
+
+p5.prototype.removeFish = (x, y) => {
+  return p5nyan.removeFish(x, y);
+};
+
+p5.prototype.removeFishByIndex = (idx) => {
+  return p5nyan.removeFishByIndex(idx);
+};
+
+p5.prototype.removeFishByColor = (col) => {
+  return p5nyan.removeFishByColor(col);
 };
 
 /*
