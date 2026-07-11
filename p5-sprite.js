@@ -11,7 +11,12 @@ p5.prototype.start = (x = width / 2, y = height / 2, param = {}) => {
 };
 
 /** ピゴニャン用のp5.jsのセットアップ */
-p5.prototype.setupSprite = (x = width / 2, y = height / 2, margin_y = 0, margin_x = 0) => {
+p5.prototype.setupSprite = (
+  x = width / 2,
+  y = height / 2,
+  margin_y = 0,
+  margin_x = 0,
+) => {
   // キャンバスの設定
   document.querySelector('canvas').style.border = 'solid 1px gray';
   if (margin_x) {
@@ -89,6 +94,14 @@ class Sprite {
     // しゃべる
     if (!noSpeak && this.msg != undefined) {
       this.drawMessage();
+    }
+
+    if (Sprite.flushScreen) {
+      if (typeof drawForeground === 'function') {
+        push();
+        drawForeground();
+        pop();
+      }
     }
 
     return eaten;
@@ -465,7 +478,15 @@ class Sprite {
 
   /** ツール（ランダムに色を選ぶ） */
   randomColor(cur_col) {
-    const list = ['coral', 'silver', 'skyblue', 'gold', 'lightgreen', 'plum', 'lightpink'];
+    const list = [
+      'coral',
+      'silver',
+      'skyblue',
+      'gold',
+      'lightgreen',
+      'plum',
+      'lightpink',
+    ];
     let col;
     do {
       col = random(list);
@@ -625,7 +646,7 @@ class Sprite {
         x: x,
         y: y,
         col: col,
-        tailCol: this.getDarkColor(col)
+        tailCol: this.getDarkColor(col),
       });
     } else {
       // 色違いは置きかえ
@@ -633,7 +654,7 @@ class Sprite {
         x: x,
         y: y,
         col: col,
-        tailCol: this.getDarkColor(col)
+        tailCol: this.getDarkColor(col),
       });
     }
     return this.draw(true);
