@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 let p5nyan; // start関数から始めるとき用
 
@@ -11,19 +11,14 @@ p5.prototype.start = (x = width / 2, y = height / 2, param = {}) => {
 };
 
 /** ピゴニャン用のp5.jsのセットアップ */
-p5.prototype.setupSprite = (
-  x = width / 2,
-  y = height / 2,
-  margin_y = 0,
-  margin_x = 0,
-) => {
+p5.prototype.setupSprite = (x = width / 2, y = height / 2, margin_y = 0, margin_x = 0) => {
   // キャンバスの設定
-  document.querySelector('canvas').style.border = 'solid 1px gray';
+  document.querySelector("canvas").style.border = "solid 1px gray";
   if (margin_x) {
-    document.querySelector('canvas').style.marginTop = margin_x + 'px';
+    document.querySelector("canvas").style.marginTop = margin_x + "px";
   }
   if (margin_y) {
-    document.querySelector('canvas').style.marginTop = margin_y + 'px';
+    document.querySelector("canvas").style.marginTop = margin_y + "px";
   }
   // document.addEventListener("contextmenu", (e) => e.preventDefault());
 
@@ -35,12 +30,13 @@ p5.prototype.setupSprite = (
 class Sprite {
   static flushScreen = true;
   static withBody = true;
+  static fID = 0;
 
   constructor(x, y, param = {}) {
     this.x = x;
     this.y = Sprite.withBody ? y - 14 : y;
     this.dir = param.dir || { x: 1, y: 0 };
-    this.col = param.col || 'coral';
+    this.col = param.col || "coral";
     this.dcol = this.getDarkColor(this.col);
     this.pcol = this.getPaleColor(this.col);
     this.state = false;
@@ -54,8 +50,8 @@ class Sprite {
   /** 描画（ピゴニャンと魚） */
   draw(keepState = false, noSpeak = false) {
     if (Sprite.flushScreen) {
-      background(255);
-      if (typeof drawBackground === 'function') {
+      if (typeof drawBackground === "function") {
+        background(255);
         push();
         drawBackground();
         pop();
@@ -97,7 +93,7 @@ class Sprite {
     }
 
     if (Sprite.flushScreen) {
-      if (typeof drawForeground === 'function') {
+      if (typeof drawForeground === "function") {
         push();
         drawForeground();
         pop();
@@ -170,7 +166,7 @@ class Sprite {
       fill(this.dcol);
       ellipse(x + 4 * d, y + 20, 18, 6);
       noStroke();
-      fill('gold');
+      fill("gold");
       circle(x + 10 * d, y + 23, 5);
     }
     // 手前脚が後
@@ -179,7 +175,7 @@ class Sprite {
       fill(this.dcol);
       ellipse(x + 6 * d, y + 20, 14, 5);
       noStroke();
-      fill('gold');
+      fill("gold");
       circle(x + 12 * d, y + 23, 5);
       // front arm
       strokeWeight(5);
@@ -215,7 +211,7 @@ class Sprite {
     line(x + 31 * d, y + 3, x + 30 * d, y + 3);
     // mouth
     if (this.msg != undefined) {
-      fill('crimson');
+      fill("crimson");
       noStroke();
       ellipse(x + 14 * d, y + 14, 4, 5);
     }
@@ -254,7 +250,7 @@ class Sprite {
       fill(this.dcol);
       ellipse(x, y + 20, 20, 7);
       noStroke();
-      fill('gold');
+      fill("gold");
       circle(x, y + 23, 5);
     }
     // 上向き
@@ -328,7 +324,7 @@ class Sprite {
         line(x + 24, y + 3, x + 30, y + 3);
         // mouth
         if (this.msg != undefined) {
-          fill('crimson');
+          fill("crimson");
           noStroke();
           ellipse(x, y + 15, 4, 5);
         }
@@ -353,7 +349,7 @@ class Sprite {
       line(x + 22, y + 13 * d, x + 28, y + 13 * d);
       // mouth
       if (this.msg != undefined) {
-        fill('crimson');
+        fill("crimson");
         noStroke();
         ellipse(x, y + 20 * d, 4, 4);
       }
@@ -375,29 +371,29 @@ class Sprite {
   /** 〜に向ける */
   turn(dir) {
     switch (dir) {
-      case '上':
+      case "上":
       case 0:
         this.dir.x = 0;
         this.dir.y = -1;
         break;
-      case '下':
+      case "下":
       case 180:
         this.dir.x = 0;
         this.dir.y = 1;
         break;
-      case '右':
+      case "右":
       case 90:
         this.dir.x = 1;
         this.dir.y = 0;
         break;
-      case '左':
+      case "左":
       case -90:
       case 270:
         this.dir.x = -1;
         this.dir.y = 0;
         break;
       default:
-        console.error('方向は 上/下/左/右 か 0/90/180/270 で指定してください');
+        console.error("方向は 上/下/左/右 か 0/90/180/270 で指定してください");
         noLoop();
         break;
     }
@@ -422,22 +418,22 @@ class Sprite {
   /** 方法を取得 */
   getDirection() {
     if (this.dir.x == 1) {
-      return '右';
+      return "右";
     }
     if (this.dir.x == -1) {
-      return '左';
+      return "左";
     }
     if (this.dir.y == 1) {
-      return '下';
+      return "下";
     }
     if (this.dir.y == -1) {
-      return '上';
+      return "上";
     }
   }
 
   /** セリフを設定 */
   say(msg = undefined) {
-    if (msg === '') {
+    if (msg === "") {
       this.msg = undefined;
     } else {
       this.msg = msg;
@@ -461,8 +457,8 @@ class Sprite {
   }
 
   /** 色を変える */
-  changeColor(col = 'coral') {
-    if (col === 'random') {
+  changeColor(col = "coral") {
+    if (col === "random") {
       col = this.randomColor(this.col);
     }
     this.col = col;
@@ -478,15 +474,7 @@ class Sprite {
 
   /** ツール（ランダムに色を選ぶ） */
   randomColor(cur_col) {
-    const list = [
-      'coral',
-      'silver',
-      'skyblue',
-      'gold',
-      'lightgreen',
-      'plum',
-      'lightpink',
-    ];
+    const list = ["coral", "silver", "skyblue", "gold", "lightgreen", "plum", "lightpink"];
     let col;
     do {
       col = random(list);
@@ -622,12 +610,19 @@ class Sprite {
 
   /* 以下、魚の描画  */
 
+  createFID() {
+    Sprite.fID += 1;
+    return Sprite.fID;
+  }
+
   /** 魚をリストに追加して描画する */
-  putFish(x, y, col = 'skyblue') {
-    if (!isFinite(x) || !isFinite(y)) return;
-    if (col === 'random') {
+  putFish(x, y, col) {
+    if (!isFinite(x) || !isFinite(y)) return false;
+
+    if (col === "random") {
       col = this.randomColor(this.col);
     }
+
     let sameFish = undefined;
     for (let i = 0; i < this.fishList.length; i++) {
       if (this.fishList[i].x == x && this.fishList[i].y == y) {
@@ -636,28 +631,36 @@ class Sprite {
           break;
         } else {
           // 同じ位置で同色はリスト追加なし
-          return;
+          return false;
         }
       }
     }
+    let fid;
     if (sameFish === undefined) {
+      fid = this.createFID();
       // 新しい魚はリストに追加
       this.fishList.push({
+        id: fid,
         x: x,
         y: y,
         col: col,
-        tailCol: this.getDarkColor(col),
+        tailCol: this.getDarkColor(col)
       });
     } else {
+      fid = this.fishList[sameFish].id;
       // 色違いは置きかえ
       this.fishList.splice(sameFish, 1, {
+        id: fid,
         x: x,
         y: y,
         col: col,
-        tailCol: this.getDarkColor(col),
+        tailCol: this.getDarkColor(col)
       });
     }
-    return this.draw(true);
+
+    this.draw(true);
+
+    return fid;
   }
 
   /** 魚を描画する */
@@ -681,12 +684,21 @@ class Sprite {
   }
 
   /** 魚を動かす */
-  moveFish(step = 10) {
+  moveFish(step, id) {
     if (!this.fishList) return;
-    for (let i = 0; i < this.fishList.length; i += 1) {
-      this.fishList[i].x -= abs(step);
-      if (this.fishList[i].x < -11) this.fishList[i].x = width + 15;
+
+    if (id) {
+      let idx = this.fishList.findIndex((f) => f.id == id);
+      if (idx == -1) return false;
+      this.fishList[idx].x -= abs(step);
+      if (this.fishList[idx].x < -11) this.fishList[idx].x = width + 15;
+    } else {
+      for (let i = 0; i < this.fishList.length; i += 1) {
+        this.fishList[i].x -= abs(step);
+        if (this.fishList[i].x < -11) this.fishList[i].x = width + 15;
+      }
     }
+
     return this.draw(true);
   }
 
@@ -731,9 +743,19 @@ class Sprite {
     this.draw(true);
   }
 
-  /**  特定の座標にいる魚を削除する */
-  removeFish(x, y) {
-    this.fishList = this.fishList.filter((f) => !(f.x == x && f.y == y));
+  /** IDを指定して魚を削除する */
+  removeFish(id) {
+    this.fishList = this.fishList.filter((f) => !(f.id == id));
+    this.draw(true);
+  }
+
+  /**  特定の座標あるいは範囲にいる魚を削除する */
+  removeFishAt(x, y, r) {
+    if (r) {
+      this.fishList = this.fishList.filter((f) => !(dist(f.x, f.y, x, y) < r));
+    } else {
+      this.fishList = this.fishList.filter((f) => !(f.x == x && f.y == y));
+    }
     this.draw(true);
   }
 
@@ -767,7 +789,7 @@ p5.prototype.sayFor = async (msg, sec) => {
     p5nyan.say(msg);
     p5nyan.draw(true);
     await sleep(sec);
-    p5nyan.say('');
+    p5nyan.say("");
   }
 };
 
@@ -829,12 +851,12 @@ p5.prototype.keepHorizontal = (flag = true) => {
   p5nyan.keepHorizontal(flag);
 };
 
-p5.prototype.putFish = (x, y, col) => {
+p5.prototype.putFish = (x, y, col = "skyblue") => {
   return p5nyan.putFish(x, y, col);
 };
 
-p5.prototype.moveFish = (step) => {
-  return p5nyan.moveFish(step);
+p5.prototype.moveFish = (step, id = false) => {
+  return p5nyan.moveFish(step, id);
 };
 
 p5.prototype.getFishNum = () => {
@@ -845,8 +867,12 @@ p5.prototype.resetFish = () => {
   return p5nyan.resetFish();
 };
 
-p5.prototype.removeFish = (x, y) => {
-  return p5nyan.removeFish(x, y);
+p5.prototype.removeFish = (id) => {
+  return p5nyan.removeFish(id);
+};
+
+p5.prototype.removeFishAt = (x, y, r = false) => {
+  return p5nyan.removeFishAt(x, y, r);
 };
 
 p5.prototype.removeFishByIndex = (idx) => {
