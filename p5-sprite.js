@@ -50,8 +50,8 @@ class Sprite {
   /** 描画（ピゴニャンと魚） */
   draw(keepState = false, noSpeak = false) {
     if (Sprite.flushScreen) {
+      background(255);
       if (typeof drawBackground === "function") {
-        background(255);
         push();
         drawBackground();
         pop();
